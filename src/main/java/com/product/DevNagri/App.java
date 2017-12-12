@@ -1,15 +1,16 @@
 package com.product.DevNagri;
 
-/**
- * Hello world!
- *
- */
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 public class App 
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
+public static void main(String arr[])
+{
+ WebDriver Driver=new FirefoxDriver();
+ Driver.close();
+
+}
 }
 
 
