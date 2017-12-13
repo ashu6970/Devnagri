@@ -1,0 +1,13 @@
+url= http://dev.devnagri.co.in/
+browser= chrome
+username= client@fourtek.com
+password= secret
+
+
+
+#xpath
+ username_xpath = .//*[@id='email']
+ password_xpath= .//*[@id='password']
+ login_xpath= //form[@id='loginform']/div[4]
+ createproject_xpath = 
+ project_type_xpath = .//*[@id='addProjectForm']/div/div[2]/div[1]/div/div/button[1]
