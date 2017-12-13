@@ -30,7 +30,10 @@ public class Base_Test {
         e.printStackTrace();
     }
 }
-    
+   public static void open_browser()
+   {
+	   
+   }
     
     
 }
