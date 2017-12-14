@@ -1,6 +1,7 @@
 package com.testcase;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -23,6 +24,9 @@ public class LoginPageTest extends Base_Test{
 	public void doLogin()
 	{
 		loginpage.HomePagelogin(prop.getProperty("username"),prop.getProperty("password"));
+		waitForPageLoaded();
+		String tittle = loginpage.Validate();
+		Assert.assertEquals(tittle, "Project created successfully! ");
 		
 	}
     

@@ -24,6 +24,9 @@ public class LoginPage extends Base_Test {
 	@FindBy(xpath="//form[@id='loginform']/div[4]")
 	WebElement btn_login;
 	
+	@FindBy(xpath="//div[@id='start-project-card']/child::div[1]/h4']")
+	WebElement valid;
+	
 	public LoginPage()
 	{
 		PageFactory.initElements(driver, this);
@@ -41,5 +44,10 @@ public class LoginPage extends Base_Test {
 		btn_login.click();
 		
 	}
+    public String Validate()
+    {
+    	 return valid.getText();
+    	
+    }
 
 }
