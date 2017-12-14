@@ -14,7 +14,8 @@ public class Testcases extends Base_Test{
 	{
 		readPropertyFile();
 		initializeBrowser();
-		driver.get(System.getProperty("url")); 
+		driver.get("http://dev.devnagri.co.in/");
+		
 		   
 	}
 	
@@ -22,9 +23,9 @@ public class Testcases extends Base_Test{
     public void doTheLogin()
     {
     	
-    	driver.findElement(By.xpath(prop.getProperty("username_xpath"))).sendKeys(prop.getProperty("username"));
-    	driver.findElement(By.xpath(prop.getProperty("password_xpath"))).sendKeys(prop.getProperty("password"));
-    	driver.findElement(By.xpath(prop.getProperty("login_xpath"))).click();
+    	driver.findElement(By.xpath(".//*[@id='email']")).sendKeys("client@fourtek.com");
+    	driver.findElement(By.xpath(".//*[@id='password']")).sendKeys("secret");
+    	driver.findElement(By.xpath("//form[@id='loginform']/div[4]")).click();
     	
     	
     }

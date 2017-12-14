@@ -19,9 +19,9 @@ public class Base_Test {
     //Read the property file
     public static void readPropertyFile()
     {
-    	if(file==null)
+    
     try {
-        file = new File(System.getProperty("user.dir") + "/src/resource/java/com/resources/Config.prop");
+        file = new File(System.getProperty("user.dir") + "/src/resource/java/config.prop");
         FileInputStream file_read = new FileInputStream(file); 
         prop = new Properties();
         prop.load(file_read);
@@ -52,8 +52,7 @@ public class Base_Test {
 			System.out.println("Browser is not open");
 			}
 			*/
-
-	   
+	   driver.get(prop.getProperty("url"));
 	   }
    
    public static void click()
@@ -62,6 +61,7 @@ public class Base_Test {
 	   
 	   
    }
+   
 
    
  
