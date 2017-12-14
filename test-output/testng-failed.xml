@@ -3,11 +3,12 @@
 <suite thread-count="-1" name="Failed suite [Automation Test Suite]">
   <test name="Testcase1(failed)">
     <classes>
-      <class name="com.testcase.LoginPageTest">
+      <class name="com.testcase.CreateProjectTest">
         <methods>
-          <include name="doLogin"/>
+          <include name="projectType"/>
+          <include name="typeProjectName"/>
         </methods>
-      </class> <!-- com.testcase.LoginPageTest -->
+      </class> <!-- com.testcase.CreateProjectTest -->
     </classes>
   </test> <!-- Testcase1(failed) -->
 </suite> <!-- Failed suite [Automation Test Suite] -->
