@@ -9,11 +9,6 @@ import com.main.product.Base_Test;
 public class LoginPage extends Base_Test {
 	
 	//Page Factory model
-	@FindBy(name="username")
-	WebElement username;
-	
-	@FindBy(name="password")
-	WebElement password;
 	
 	@FindBy(xpath=".//*[@id='email']")
 	WebElement txtbn_username;
