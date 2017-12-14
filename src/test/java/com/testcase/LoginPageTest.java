@@ -10,19 +10,19 @@ import com.pages.product.LoginPage;
 public class LoginPageTest extends Base_Test{
 	
 	 public LoginPage loginpage;
-	
+	 
 	@Test(priority=1)
 	public void openBrowser()
 	{
 		readPropertyFile();
 		initializeBrowser();
-		
 		loginpage = new LoginPage();
 		   
 	}
-	@Test(priority=1)
+	@Test(priority=2)
 	public void doLogin()
 	{
+		loginpage.HomePagelogin(prop.getProperty("username"),prop.getProperty("password"));
 		
 	}
     

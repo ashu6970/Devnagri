@@ -34,11 +34,12 @@ public class LoginPage extends Base_Test {
 		return driver.getTitle();
 	}
 		
-	public void HomePagelogin(String username, String password)
+	public void HomePagelogin(String user, String pwd)
 	{
-		//username.sendKeys(username);
-		//password.sendKeys(password);
-		//loginBtn.click();
+		txtbn_username.sendKeys(user);
+		txtbn_password.sendKeys(pwd);
+		btn_login.click();
+		
 	}
 
 }

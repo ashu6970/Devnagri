@@ -57,9 +57,8 @@ public class Base_Test {
    
    public static void click()
    {
-	   
-	   
-	   
+	     
+	     
    }
    
 
