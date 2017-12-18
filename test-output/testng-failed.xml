@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" name="Failed suite [Automation Test Suite]">
-  <test name="Project Type Testcase(failed)">
+  <test name="Login Testcase(failed)">
     <classes>
-      <class name="com.testcase.CreateProjectTest">
+      <class name="com.testcase.LoginPageTest">
         <methods>
-          <include name="doClickOnLetsStartButton"/>
+          <include name="doLogin"/>
         </methods>
-      </class> <!-- com.testcase.CreateProjectTest -->
+      </class> <!-- com.testcase.LoginPageTest -->
     </classes>
-  </test> <!-- Project Type Testcase(failed) -->
+  </test> <!-- Login Testcase(failed) -->
 </suite> <!-- Failed suite [Automation Test Suite] -->

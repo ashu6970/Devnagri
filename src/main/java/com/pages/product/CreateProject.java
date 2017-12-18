@@ -35,6 +35,7 @@ public class CreateProject extends Base_Test{
 	@FindBy(xpath="//div[@class='col-md-6 col-md-offset-3']/button[1]")    // click on Let's start button
 	 WebElement btn_letsGetStart;
 	
+	
 	public CreateProject()
 	{
 		
@@ -69,11 +70,7 @@ public class CreateProject extends Base_Test{
 	  
 	  btn_agriculture.click();
 	 
-	 
-	/* WebElement drop=driver.findElement(By.xpath("//div[contains(@class,'row p-t-20')]/child::div[2]/div/div/button[1]"));
-	 Select dropdown=new Select(drop);
-	 dropdown.selectByVisibleText("Agriculture");
-	 */
+	
   }
   
   public void selectTargetLanguage()
@@ -96,6 +93,8 @@ public class CreateProject extends Base_Test{
 	  JavascriptExecutor executor1 = (JavascriptExecutor)driver; 
 	  executor1.executeScript("arguments[0].click()", element1);
   }
+  
+ 
   
  /* public void JavaScriptClick(WebElement element) throws Exception 
   {

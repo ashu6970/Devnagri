@@ -1,5 +1,6 @@
 package com.testcase;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.main.product.Base_Test;
@@ -14,9 +15,10 @@ public class CreateProjectTest extends Base_Test {
 	{
 		try
 		{
-			
 			createproject=new CreateProject();
 		    createproject.startNewProject();
+		    String url = driver.getCurrentUrl();
+			Assert.assertEquals(url,"http://dev.devnagri.co.in/projects/start");
 	}
 		catch(Exception e)
 		{
@@ -57,6 +59,7 @@ public class CreateProjectTest extends Base_Test {
 	public void doClickOnLetsStartButton()
 	{
 		createproject.clickOnLetsStartbutton();
+		
 	}
 
 }

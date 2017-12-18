@@ -20,7 +20,7 @@ public class LoginPage extends Base_Test {
 	@FindBy(xpath="//form[@id='loginform']/div[4]")
 	WebElement btn_login;
 	
-	@FindBy(xpath="//div[@id='start-project-card']/child::div[1]/h4']")
+	@FindBy(xpath="html/body/div[2]/div[2]/div/div[1]/div/div/div[2]/div[1]/div/div/h4']")
 	WebElement valid;
 	
 	public LoginPage()
