@@ -43,6 +43,7 @@ public class LoginPage extends Base_Test {
 	}
     public String Validate()
     {
+    	waitForPageLoaded();
     	 return valid.getText();
     	
     }

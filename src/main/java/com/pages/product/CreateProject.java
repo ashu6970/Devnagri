@@ -35,6 +35,8 @@ public class CreateProject extends Base_Test{
 	@FindBy(xpath="//div[@class='col-md-6 col-md-offset-3']/button[1]")    // click on Let's start button
 	 WebElement btn_letsGetStart;
 	
+	@FindBy(xpath="//div[contains(@class,'container-fluid')]/div[1]")    // Validate Project is created
+	 WebElement valid_createProject;
 	
 	public CreateProject()
 	{
@@ -94,7 +96,10 @@ public class CreateProject extends Base_Test{
 	  executor1.executeScript("arguments[0].click()", element1);
   }
   
- 
+ public String validateCreateProject()
+ {
+	 return valid_createProject.getText();
+ }
   
  /* public void JavaScriptClick(WebElement element) throws Exception 
   {

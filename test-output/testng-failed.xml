@@ -10,4 +10,13 @@
       </class> <!-- com.testcase.LoginPageTest -->
     </classes>
   </test> <!-- Login Testcase(failed) -->
+  <test name="Create Project Testcase(failed)">
+    <classes>
+      <class name="com.testcase.CreateProjectTest">
+        <methods>
+          <include name="doClickOnLetsStartButton"/>
+        </methods>
+      </class> <!-- com.testcase.CreateProjectTest -->
+    </classes>
+  </test> <!-- Create Project Testcase(failed) -->
 </suite> <!-- Failed suite [Automation Test Suite] -->

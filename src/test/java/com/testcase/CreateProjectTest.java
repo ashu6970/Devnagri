@@ -29,7 +29,7 @@ public class CreateProjectTest extends Base_Test {
 	@Test(priority=1)
 	public void typeProjectName()
 	{
-		createproject.enterProjectName("New Project created");
+	createproject.enterProjectName("New Project created");
 		
 	}
 	
@@ -37,7 +37,6 @@ public class CreateProjectTest extends Base_Test {
 	public void projectType()
 	{
 	 createproject.selectProjectType();
-     
 	}
 	
 	@Test(priority=3)
@@ -48,17 +47,18 @@ public class CreateProjectTest extends Base_Test {
 	}
 	
 	@Test(priority=4)
-
 	public void targetLanguage()
 	{
 	createproject.selectTargetLanguage();
 	}
 	
-	@Test(priority=5)
 	
+	@Test(priority=5)
 	public void doClickOnLetsStartButton()
 	{
 		createproject.clickOnLetsStartbutton();
+		String text =createproject.validateCreateProject();
+		Assert.assertEquals(text, "Project created successfully!");
 		
 	}
 
