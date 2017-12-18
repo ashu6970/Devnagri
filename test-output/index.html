@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Automation_Test_Suite">
-              <span class="suite-name border-failed">Automation Test Suite</span>
+              <span class="suite-name border-passed">Automation Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,26 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 2 failed,   6 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Automation_Test_Suite" class="hide-methods failed suite-Automation_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Automation_Test_Suite -->
-                      <a href="#" panel-name="suite-Automation_Test_Suite" class="show-methods failed suite-Automation_Test_Suite"> (show)</a> <!-- show-methods failed suite-Automation_Test_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Automation_Test_Suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Suite" title="com.testcase.CreateProjectTest" hash-for-method="doClickOnLetsStartButton">doClickOnLetsStartButton</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Suite" title="com.testcase.LoginPageTest" hash-for-method="doLogin">doLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Automation_Test_Suite -->
+                    <span class="method-stats">8 methods,   8 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -119,6 +100,16 @@
                       <a href="#" panel-name="suite-Automation_Test_Suite" class="show-methods passed suite-Automation_Test_Suite"> (show)</a> <!-- show-methods passed suite-Automation_Test_Suite -->
                     </span>
                     <div class="method-list-content passed suite-Automation_Test_Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Suite" title="com.testcase.CreateProjectTest" hash-for-method="doClickOnLetsStartButton">doClickOnLetsStartButton</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Suite" title="com.testcase.LoginPageTest" hash-for-method="doLogin">doLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Suite" title="com.testcase.CreateProjectTest" hash-for-method="industryType">industryType</a> <!-- method navigator-link -->
@@ -161,9 +152,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Automation_Test_Suite" class="panel Automation_Test_Suite">
-          <div class="suite-Automation_Test_Suite-class-failed">
+          <div class="suite-Automation_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.testcase.CreateProjectTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -172,67 +163,8 @@
                   <a name="doClickOnLetsStartButton">
                   </a> <!-- doClickOnLetsStartButton -->
                   <span class="method-name">doClickOnLetsStartButton</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Project created successfully!] but found [×
-Project created successfully!]
-	at com.testcase.CreateProjectTest.doClickOnLetsStartButton(CreateProjectTest.java:61)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Automation_Test_Suite-class-failed -->
-          <div class="suite-Automation_Test_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.testcase.LoginPageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="doLogin">
-                  </a> <!-- doLogin -->
-                  <span class="method-name">doLogin</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression html/body/div[2]/div[2]/div/div[1]/div/div/div[2]/div[1]/div/div/h4&apos;] because of the following error:
-SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;html/body/div[2]/div[2]/div/div[1]/div/div/div[2]/div[1]/div/div/h4&apos;]&apos; is not a valid XPath expression.
-  (Session info: chrome=63.0.3239.84)
-  (Driver info: chromedriver=2.34.522913 (36222509aa6e819815938cbf2709b4849735537c),platform=Linux 4.4.0-103-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;
-System info: host: &apos;fourtek-desktop&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.4.0-103-generic&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522913 (36222509aa6e81..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.84, webStorageEnabled: true}
-Session ID: 1800b3ac079572e569e62ae01ad61379
-*** Element info: {Using=xpath, value=html/body/div[2]/div[2]/div/div[1]/div/div/div[2]/div[1]/div/div/h4&apos;]}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy7.getText(Unknown Source)
-	at com.pages.product.LoginPage.Validate(LoginPage.java:46)
-	at com.testcase.LoginPageTest.doLogin(LoginPageTest.java:26)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Automation_Test_Suite-class-failed -->
-          <div class="suite-Automation_Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.testcase.CreateProjectTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="industryType">
@@ -276,6 +208,13 @@ Session ID: 1800b3ac079572e569e62ae01ad61379
               <span class="class-name">com.testcase.LoginPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="doLogin">
+                  </a> <!-- doLogin -->
+                  <span class="method-name">doLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="openBrowser">
@@ -349,31 +288,31 @@ data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'openBrowser')
 data.setCell(0, 2, 'com.testcase.LoginPageTest')
-data.setCell(0, 3, 102121);
+data.setCell(0, 3, 6390);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'doLogin')
 data.setCell(1, 2, 'com.testcase.LoginPageTest')
-data.setCell(1, 3, 13246);
+data.setCell(1, 3, 5795);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'doClickOnLetsStartButton')
 data.setCell(2, 2, 'com.testcase.CreateProjectTest')
-data.setCell(2, 3, 6460);
+data.setCell(2, 3, 4132);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'startproject')
 data.setCell(3, 2, 'com.testcase.CreateProjectTest')
-data.setCell(3, 3, 4112);
+data.setCell(3, 3, 2073);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'targetLanguage')
 data.setCell(4, 2, 'com.testcase.CreateProjectTest')
-data.setCell(4, 3, 277);
+data.setCell(4, 3, 270);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'industryType')
 data.setCell(5, 2, 'com.testcase.CreateProjectTest')
-data.setCell(5, 3, 235);
+data.setCell(5, 3, 257);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'projectType')
 data.setCell(6, 2, 'com.testcase.CreateProjectTest')
-data.setCell(6, 3, 234);
+data.setCell(6, 3, 230);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'typeProjectName')
 data.setCell(7, 2, 'com.testcase.CreateProjectTest')
@@ -382,7 +321,7 @@ window.suiteTableData['Automation_Test_Suite']= { tableData: data, tableDiv: 'ti
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-Automation_Test_Suite">
               </div> <!-- times-div-Automation_Test_Suite -->
             </div> <!-- times-div -->
@@ -414,39 +353,35 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">doLogin</span>
-                <span class="method-start">102126 ms</span>
+                <span class="method-start">6418 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.testcase.CreateProjectTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">startproject</span>
-                <span class="method-start">115424 ms</span>
+                <span class="method-start">12248 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">typeProjectName</span>
-                <span class="method-start">119542 ms</span>
+                <span class="method-start">14322 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">projectType</span>
-                <span class="method-start">119761 ms</span>
+                <span class="method-start">14541 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">industryType</span>
-                <span class="method-start">119997 ms</span>
+                <span class="method-start">14776 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">targetLanguage</span>
-                <span class="method-start">120234 ms</span>
+                <span class="method-start">15035 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">doClickOnLetsStartButton</span>
-                <span class="method-start">120512 ms</span>
+                <span class="method-start">15312 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

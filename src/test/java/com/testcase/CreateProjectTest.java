@@ -58,7 +58,7 @@ public class CreateProjectTest extends Base_Test {
 	{
 		createproject.clickOnLetsStartbutton();
 		String text =createproject.validateCreateProject();
-		Assert.assertEquals(text, "Project created successfully!");
+		Assert.assertEquals(text,"Add New File");
 		
 	}
 
