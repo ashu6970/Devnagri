@@ -1,6 +1,6 @@
 package com.pages.product;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,34 +11,42 @@ import com.main.product.Base_Test;
 public class CreateProject extends Base_Test{
 	
 	
-	@FindBy(xpath="//div[@class='text-center']/child::a[1]")
-	WebElement btn_startNewProject;
+	//div[@class='text-center']/child::a[1]
+	
+	@FindBy(xpath=".//*[@id='start-project-card']/div/div/a[1]")
+	 WebElement btn_startNewProject;
 	
 	@FindBy(xpath="//form[@id='addProjectForm']/div[1]/div[1]/div[1]/input[1]")
-	WebElement txtbn_projectName;
+	  WebElement txtbn_projectName;
 	
-	@FindBy(xpath="//form[@id='addProjectForm']/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]")
-	WebElement btn_projectType;
+	@FindBy(xpath="//div[contains(@class,'row p-t-20')]/child::div[1]/div[1]/div/button")
+	 WebElement btn_projectType;
+	
+	@FindBy(xpath="//div[@class='dropdown-menu show']/ul/li[2]/a/span[1]")
+	 WebElement btn_website;
 	
 	public CreateProject()
 	{
+		
 		PageFactory.initElements(driver, this);
 	}
+	
+	public void startNewProject()
+	{
+		btn_startNewProject.click();
+	}
 
-  public void startNewProject(String projectName)
+  public void enterProjectName(String projectName)
   {
-	  btn_startNewProject.sendKeys(projectName);
+	  txtbn_projectName.sendKeys(projectName);
 	
   }
   
   public void selectProjectType()
   {
 	  
-	 WebElement element = driver.findElement(By.xpath("//form[@id='addProjectForm']/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]"));
-	  
-	 Select dropdown = new Select(element);
-	   dropdown.selectByVisibleText("Website");
-	  
+	  btn_projectType.click();  
+	  btn_website.click();
   }
 	
 }

@@ -9,19 +9,32 @@ public class CreateProjectTest extends Base_Test {
 	
 	public CreateProject createproject;
 	
+	@Test(priority=0)
+	public void startproject()
+	{
+		try{
+			
+			createproject=new CreateProject();
+		    createproject.startNewProject();
+	}
+		catch(Exception e)
+		{
+			 e.printStackTrace();
+		}
+	}
+	
 	@Test(priority=1)
 	public void typeProjectName()
 	{
 		createproject=new CreateProject();
-		createproject.startNewProject("New Project created");
+		createproject.enterProjectName("New Project created");
 		
 	}
 	
 	@Test(priority=2)
 	public void projectType()
 	{
-	
-     createproject.selectProjectType();
+	 createproject.selectProjectType();
      
 	
 	}

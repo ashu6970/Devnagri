@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" name="Failed suite [Automation Test Suite]">
-  <test name="Testcase1(failed)">
+  <test name="Project Type Testcase(failed)">
     <classes>
       <class name="com.testcase.CreateProjectTest">
         <methods>
           <include name="projectType"/>
-          <include name="typeProjectName"/>
         </methods>
       </class> <!-- com.testcase.CreateProjectTest -->
     </classes>
-  </test> <!-- Testcase1(failed) -->
+  </test> <!-- Project Type Testcase(failed) -->
 </suite> <!-- Failed suite [Automation Test Suite] -->

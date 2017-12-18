@@ -1,5 +1,6 @@
 package com.pages.product;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -37,6 +38,7 @@ public class LoginPage extends Base_Test {
 		txtbn_username.sendKeys(user);
 		txtbn_password.sendKeys(pwd);
 		btn_login.click();
+		waitForPageLoaded();
 		
 	}
     public String Validate()

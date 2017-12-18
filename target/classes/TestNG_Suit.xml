@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Automation Test Suite">
 
-<test name="Testcase1">
+<test name="Login Testcase">
 
 <classes>
-
 <class name="com.testcase.LoginPageTest">
 </class>
-<class name="com.testcase.CreateProjectTest">
-</class>
-
 </classes>
+  </test>
+
+<test name="Project Type Testcase">
+	 <classes>
+	   <class name="com.testcase.CreateProjectTest"/>
+	 </classes>
+ 
 
 </test>
 

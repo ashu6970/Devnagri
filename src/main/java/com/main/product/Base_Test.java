@@ -55,7 +55,7 @@ public class Base_Test {
 			*/
 	   driver.get(prop.getProperty("url"));
 	   driver.manage().window().maximize();
-	   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
 	   }
    
    public static void click()
