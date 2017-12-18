@@ -1,5 +1,6 @@
 package com.pages.product;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,9 +23,15 @@ public class CreateProject extends Base_Test{
 	@FindBy(xpath="//div[contains(@class,'row p-t-20')]/child::div[1]/div[1]/div/button")
 	 WebElement btn_projectType;
 	
-	@FindBy(xpath="//div[@class='dropdown-menu show']/ul/li[2]/a/span[1]")
+	@FindBy(xpath="//div[@class='dropdown-menu show']/ul/li[2]/a/span[1]")    // To select the website
 	 WebElement btn_website;
 	
+	@FindBy(xpath=".//*[@id='addProjectForm']/div/div[2]/div[2]/div/div/div/ul/li[2]/a/span[1]") //To select the Agriculture
+	 WebElement btn_agriculture;
+	
+	@FindBy(xpath=".//*[@id='addProjectForm']/div/div[4]/div[2]/div/div/div/ul/li[9]/a/span[1]")    // To select the English
+	 WebElement btn_english;
+
 	public CreateProject()
 	{
 		
@@ -44,9 +51,37 @@ public class CreateProject extends Base_Test{
   
   public void selectProjectType()
   {
-	  
-	  btn_projectType.click();  
+	  WebElement element = driver.findElement(By.xpath("//div[contains(@class,'row p-t-20')]/child::div[1]/div[1]/div/button")); 
+	  JavascriptExecutor executor = (JavascriptExecutor)driver; 
+	  executor.executeScript("arguments[0].click()", element);
+	   
 	  btn_website.click();
+  }
+  
+  public void selectIndustry()
+  {
+	  WebElement element = driver.findElement(By.xpath("//div[contains(@class,'row p-t-20')]/child::div[2]/div/div/button[1]")); 
+	  JavascriptExecutor executor = (JavascriptExecutor)driver; 
+	  executor.executeScript("arguments[0].click()", element);
+	  
+	  btn_agriculture.click();
+	 
+	 
+	/* WebElement drop=driver.findElement(By.xpath("//div[contains(@class,'row p-t-20')]/child::div[2]/div/div/button[1]"));
+	 Select dropdown=new Select(drop);
+	 dropdown.selectByVisibleText("Agriculture");
+	 */
+  }
+  
+  public void selectTargetLanguage()
+  {
+	  WebElement element = driver.findElement(By.xpath(".//*[@id='addProjectForm']/div/div[4]/div[2]/div/div/button")); 
+	  JavascriptExecutor executor = (JavascriptExecutor)driver; 
+	  executor.executeScript("arguments[0].click()", element);
+	  
+	  
+	  
+	  
   }
 	
 }

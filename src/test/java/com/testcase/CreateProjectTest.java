@@ -36,7 +36,20 @@ public class CreateProjectTest extends Base_Test {
 	{
 	 createproject.selectProjectType();
      
+	}
 	
+	@Test(priority=3)
+	public void industryType()
+	{
+		createproject.selectIndustry();
+		
+	}
+	
+	@Test(priority=4)
+
+	public void targetLanguage()
+	{
+	createproject.selectTargetLanguage();
 	}
 	
 

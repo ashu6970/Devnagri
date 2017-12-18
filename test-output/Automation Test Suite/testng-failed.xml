@@ -5,7 +5,7 @@
     <classes>
       <class name="com.testcase.CreateProjectTest">
         <methods>
-          <include name="projectType"/>
+          <include name="industryType"/>
         </methods>
       </class> <!-- com.testcase.CreateProjectTest -->
     </classes>
