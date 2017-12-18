@@ -1,6 +1,6 @@
 package com.testcase;
 
-import org.testng.Assert;
+
 import org.testng.annotations.Test;
 import com.main.product.Base_Test;
 import com.pages.product.LoginPage;

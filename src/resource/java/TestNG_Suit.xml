@@ -9,7 +9,7 @@
 </classes>
   </test>
 
-<test name="Project Type Testcase">
+<test name="Create Project Testcase">
 	 <classes>
 	   <class name="com.testcase.CreateProjectTest"/>
 	 </classes>

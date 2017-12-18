@@ -1,11 +1,11 @@
 package com.pages.product;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+
 
 import com.main.product.Base_Test;
 
@@ -92,8 +92,35 @@ public class CreateProject extends Base_Test{
   
   public void clickOnLetsStartbutton()
   {
-	  btn_letsGetStart.click();
+	  WebElement element1= driver.findElement(By.xpath("//div[@class='col-md-6 col-md-offset-3']/button[1]")); 
+	  JavascriptExecutor executor1 = (JavascriptExecutor)driver; 
+	  executor1.executeScript("arguments[0].click()", element1);
   }
+  
+ /* public void JavaScriptClick(WebElement element) throws Exception 
+  {
+		try 
+		{
+			if (element.isEnabled() && element.isDisplayed())
+			{
+				System.out.println("Clicking on element with using java script click");
+
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+			} 
+			else 
+			{
+				System.out.println("Unable to click on element");
+			}
+		}  
+		 catch (Exception e) 
+		{
+			System.out.println("Unable to click on element "+ e.getStackTrace());
+		}
+
+  }*/
+  
 }
+
+
 
 

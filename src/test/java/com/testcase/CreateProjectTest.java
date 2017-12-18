@@ -12,7 +12,8 @@ public class CreateProjectTest extends Base_Test {
 	@Test(priority=0)
 	public void startproject()
 	{
-		try{
+		try
+		{
 			
 			createproject=new CreateProject();
 		    createproject.startNewProject();

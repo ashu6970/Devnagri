@@ -1,45 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Automation Test Suite" duration-ms="16887" started-at="2017-12-18T07:17:27Z" finished-at="2017-12-18T07:17:44Z">
+  <suite name="Automation Test Suite" duration-ms="20977" started-at="2017-12-18T08:06:36Z" finished-at="2017-12-18T08:06:57Z">
     <groups>
     </groups>
-    <test name="Login Testcase" duration-ms="13799" started-at="2017-12-18T07:17:27Z" finished-at="2017-12-18T07:17:41Z">
+    <test name="Login Testcase" duration-ms="12416" started-at="2017-12-18T08:06:36Z" finished-at="2017-12-18T08:06:49Z">
       <class name="com.testcase.LoginPageTest">
-        <test-method status="PASS" signature="openBrowser()[pri:1, instance:com.testcase.LoginPageTest@68c4039c]" name="openBrowser" duration-ms="6397" started-at="2017-12-18T12:47:28Z" finished-at="2017-12-18T12:47:34Z">
+        <test-method status="PASS" signature="openBrowser()[pri:1, instance:com.testcase.LoginPageTest@68c4039c]" name="openBrowser" duration-ms="6794" started-at="2017-12-18T13:36:36Z" finished-at="2017-12-18T13:36:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="doLogin()[pri:2, instance:com.testcase.LoginPageTest@68c4039c]" name="doLogin" duration-ms="7354" started-at="2017-12-18T12:47:34Z" finished-at="2017-12-18T12:47:41Z">
+        <test-method status="PASS" signature="doLogin()[pri:2, instance:com.testcase.LoginPageTest@68c4039c]" name="doLogin" duration-ms="5552" started-at="2017-12-18T13:36:43Z" finished-at="2017-12-18T13:36:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLogin -->
       </class> <!-- com.testcase.LoginPageTest -->
     </test> <!-- Login Testcase -->
-    <test name="Project Type Testcase" duration-ms="3049" started-at="2017-12-18T07:17:41Z" finished-at="2017-12-18T07:17:44Z">
+    <test name="Create Project Testcase" duration-ms="8521" started-at="2017-12-18T08:06:49Z" finished-at="2017-12-18T08:06:57Z">
       <class name="com.testcase.CreateProjectTest">
-        <test-method status="PASS" signature="startproject()[pri:0, instance:com.testcase.CreateProjectTest@13deb50e]" name="startproject" duration-ms="1949" started-at="2017-12-18T12:47:41Z" finished-at="2017-12-18T12:47:43Z">
+        <test-method status="PASS" signature="startproject()[pri:0, instance:com.testcase.CreateProjectTest@239963d8]" name="startproject" duration-ms="2784" started-at="2017-12-18T13:36:49Z" finished-at="2017-12-18T13:36:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startproject -->
-        <test-method status="PASS" signature="typeProjectName()[pri:1, instance:com.testcase.CreateProjectTest@13deb50e]" name="typeProjectName" duration-ms="212" started-at="2017-12-18T12:47:43Z" finished-at="2017-12-18T12:47:43Z">
+        <test-method status="PASS" signature="typeProjectName()[pri:1, instance:com.testcase.CreateProjectTest@239963d8]" name="typeProjectName" duration-ms="256" started-at="2017-12-18T13:36:51Z" finished-at="2017-12-18T13:36:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- typeProjectName -->
-        <test-method status="PASS" signature="projectType()[pri:2, instance:com.testcase.CreateProjectTest@13deb50e]" name="projectType" duration-ms="240" started-at="2017-12-18T12:47:44Z" finished-at="2017-12-18T12:47:44Z">
+        <test-method status="PASS" signature="projectType()[pri:2, instance:com.testcase.CreateProjectTest@239963d8]" name="projectType" duration-ms="243" started-at="2017-12-18T13:36:52Z" finished-at="2017-12-18T13:36:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- projectType -->
-        <test-method status="PASS" signature="industryType()[pri:3, instance:com.testcase.CreateProjectTest@13deb50e]" name="industryType" duration-ms="288" started-at="2017-12-18T12:47:44Z" finished-at="2017-12-18T12:47:44Z">
+        <test-method status="PASS" signature="industryType()[pri:3, instance:com.testcase.CreateProjectTest@239963d8]" name="industryType" duration-ms="246" started-at="2017-12-18T13:36:52Z" finished-at="2017-12-18T13:36:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- industryType -->
-        <test-method status="PASS" signature="targetLanguage()[pri:4, instance:com.testcase.CreateProjectTest@13deb50e]" name="targetLanguage" duration-ms="336" started-at="2017-12-18T12:47:44Z" finished-at="2017-12-18T12:47:44Z">
+        <test-method status="PASS" signature="targetLanguage()[pri:4, instance:com.testcase.CreateProjectTest@239963d8]" name="targetLanguage" duration-ms="260" started-at="2017-12-18T13:36:52Z" finished-at="2017-12-18T13:36:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- targetLanguage -->
+        <test-method status="PASS" signature="doClickOnLetsStartButton()[pri:5, instance:com.testcase.CreateProjectTest@239963d8]" name="doClickOnLetsStartButton" duration-ms="4717" started-at="2017-12-18T13:36:52Z" finished-at="2017-12-18T13:36:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doClickOnLetsStartButton -->
       </class> <!-- com.testcase.CreateProjectTest -->
-    </test> <!-- Project Type Testcase -->
+    </test> <!-- Create Project Testcase -->
   </suite> <!-- Automation Test Suite -->
 </testng-results>
