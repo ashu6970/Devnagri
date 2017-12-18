@@ -26,7 +26,6 @@ public class CreateProjectTest extends Base_Test {
 	@Test(priority=1)
 	public void typeProjectName()
 	{
-		createproject=new CreateProject();
 		createproject.enterProjectName("New Project created");
 		
 	}
@@ -52,5 +51,11 @@ public class CreateProjectTest extends Base_Test {
 	createproject.selectTargetLanguage();
 	}
 	
+	@Test(priority=5)
+	
+	public void doClickOnLetsStartButton()
+	{
+		createproject.clickOnLetsStartbutton();
+	}
 
 }

@@ -31,7 +31,10 @@ public class CreateProject extends Base_Test{
 	
 	@FindBy(xpath=".//*[@id='addProjectForm']/div/div[4]/div[2]/div/div/div/ul/li[9]/a/span[1]")    // To select the English
 	 WebElement btn_english;
-
+	
+	@FindBy(xpath="//div[@class='col-md-6 col-md-offset-3']/button[1]")    // click on Let's start button
+	 WebElement btn_letsGetStart;
+	
 	public CreateProject()
 	{
 		
@@ -79,11 +82,18 @@ public class CreateProject extends Base_Test{
 	  JavascriptExecutor executor = (JavascriptExecutor)driver; 
 	  executor.executeScript("arguments[0].click()", element);
 	  
+	  btn_english.click();
 	  
-	  
-	  
+	  WebElement element1= driver.findElement(By.xpath(".//*[@id='addProjectForm']/div/div[4]/div[2]/div/div/button")); 
+	  JavascriptExecutor executor1 = (JavascriptExecutor)driver; 
+	  executor1.executeScript("arguments[0].click()", element1);
+	     
   }
-	
+  
+  public void clickOnLetsStartbutton()
+  {
+	  btn_letsGetStart.click();
+  }
 }
 
 
