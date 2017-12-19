@@ -4,22 +4,29 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
 import com.main.product.Base_Test;
 
 public class FileUpload extends Base_Test{
 	
-	@FindBy(xpath="//a[contains(text(),'Add New File')]")    // To upload the file
+	@FindBy(xpath="//a[contains(text(),'Add New File')]")    // Click on add file button
 	 WebElement btn_addNewFile;
 	
-	@FindBy(xpath="//div[contains(@class,'modal-body step-1')]/div[1]")    
+	@FindBy(xpath="//div[contains(@class,'modal-body step-1')]/div[1]")  //Click on drop pop  
 	 WebElement btn_dropNewFile;
 	
 	@FindBy(xpath="//div[contains(@class,'modal-body step-1')]/div[1]/div[1]/div[2]/button[1]")    
 	 WebElement btn_process;
+	
+	@FindBy(xpath="//select[@id='select']")    
+	 WebElement select_dropDownListOfSelectFile;
+	
 	
 	
 	public FileUpload()
@@ -76,6 +83,7 @@ public class FileUpload extends Base_Test{
             robot.keyRelease(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_ENTER);
             robot.keyRelease(KeyEvent.VK_ENTER);
+            Thread.sleep(3000);
         } 
         
         catch (Exception e) 
@@ -94,6 +102,23 @@ public class FileUpload extends Base_Test{
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	public void fileSelectionPop()
+	{
+		
+		select_dropDownListOfSelectFile.click();
+		WebElement selectDropdown = select_dropDownListOfSelectFile;
+		Select filetype=new Select(selectDropdown);
+		List<WebElement> allOptions= filetype.getOptions();
+		System.out.println(allOptions.size());
+		
+		for(int i=0;i<=allOptions.size();i++)
+		{
+			if(allOptions.get(2).equals(2))
+				selectDropdown.click();	
+		}
+		
 	}
 }
 

@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" name="Failed suite [Automation Test Suite]">
-  <test name="Login Testcase(failed)">
+  <test name="File Upload Testcase(failed)">
     <classes>
-      <class name="com.testcase.LoginPageTest">
+      <class name="com.testcase.FileUploadTest">
         <methods>
-          <include name="doLogin"/>
-          <include name="openBrowser"/>
+          <include name="clickOnAddNewFile"/>
+          <include name="selectFileType"/>
+          <include name="enterFileLocation"/>
         </methods>
-      </class> <!-- com.testcase.LoginPageTest -->
+      </class> <!-- com.testcase.FileUploadTest -->
     </classes>
-  </test> <!-- Login Testcase(failed) -->
-  <test name="Create Project Testcase(failed)">
-    <classes>
-      <class name="com.testcase.CreateProjectTest">
-        <methods>
-          <include name="doClickOnLetsStartButton"/>
-        </methods>
-      </class> <!-- com.testcase.CreateProjectTest -->
-    </classes>
-  </test> <!-- Create Project Testcase(failed) -->
+  </test> <!-- File Upload Testcase(failed) -->
 </suite> <!-- Failed suite [Automation Test Suite] -->

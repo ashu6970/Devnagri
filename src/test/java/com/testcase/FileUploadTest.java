@@ -37,10 +37,19 @@ public class FileUploadTest extends Base_Test {
 		}
 	}
 	
-	@Test(priority=3,dependsOnMethods={"enterFileLocation"})
+	/*@Test(priority=3,dependsOnMethods={"enterFileLocation"})
 	public void clickOnProcess()
 	{
 		fileload.process();
+	}*/
+	
+	@Test(priority=3,dependsOnMethods={"enterFileLocation"})
+	public void selectFileType()
+ 
+	{
+		
+		fileload.fileSelectionPop();
+		
 	}
 
 }
