@@ -5,10 +5,7 @@
     <classes>
       <class name="com.testcase.CreateProjectTest">
         <methods>
-          <include name="projectType"/>
           <include name="industryType"/>
-          <include name="doClickOnLetsStartButton"/>
-          <include name="targetLanguage"/>
         </methods>
       </class> <!-- com.testcase.CreateProjectTest -->
     </classes>

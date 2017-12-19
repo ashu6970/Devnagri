@@ -61,12 +61,13 @@ public class CreateProjectTest extends Base_Test {
 	
 	
 	@Test(priority=5)
-	public void doClickOnLetsStartButton()
+	public void doClickOnLetsStartButton() throws InterruptedException
 	{
 		createproject.clickOnLetsStartbutton();
 		pageScrolldown();
 		String text =createproject.validateCreateProject();
 		Assert.assertEquals(text,"Add New File");
+		Thread.sleep(1000);
 		
 		
 	}

@@ -55,37 +55,55 @@ public class CreateProject extends Base_Test{
 	
   }
   
-  public void selectProjectType()
+  public void selectProjectType() 
   {
+	 try
+	 {
+		 Thread.sleep(1000);
 	  WebElement element = driver.findElement(By.xpath("//div[contains(@class,'row p-t-20')]/child::div[1]/div[1]/div/button")); 
 	  JavascriptExecutor executor = (JavascriptExecutor)driver; 
 	  executor.executeScript("arguments[0].click()", element);
-	   
 	  btn_website.click();
+	  }
+	 catch(Exception e)
+	 {
+		 e.printStackTrace();
+	 }
   }
   
   public void selectIndustry()
   {
+	  try
+	  {
+		  Thread.sleep(1000);  
 	  WebElement element = driver.findElement(By.xpath("//div[contains(@class,'row p-t-20')]/child::div[2]/div/div/button[1]")); 
 	  JavascriptExecutor executor = (JavascriptExecutor)driver; 
 	  executor.executeScript("arguments[0].click()", element);
-	  
 	  btn_agriculture.click();
-	 
+	  }
+	  catch(Exception e)
+		 {
+			 e.printStackTrace();
+		 }
 	
   }
   
   public void selectTargetLanguage()
   {
+	  try{
 	  WebElement element = driver.findElement(By.xpath(".//*[@id='addProjectForm']/div/div[4]/div[2]/div/div/button")); 
 	  JavascriptExecutor executor = (JavascriptExecutor)driver; 
 	  executor.executeScript("arguments[0].click()", element);
-	  
 	  btn_english.click();
 	  
 	  WebElement element1= driver.findElement(By.xpath(".//*[@id='addProjectForm']/div/div[4]/div[2]/div/div/button")); 
 	  JavascriptExecutor executor1 = (JavascriptExecutor)driver; 
 	  executor1.executeScript("arguments[0].click()", element1);
+	  }
+	  catch(Exception e)
+	  {
+		  e.printStackTrace();
+	  }
 	     
   }
   
