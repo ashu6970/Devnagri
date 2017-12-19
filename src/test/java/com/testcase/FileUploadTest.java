@@ -10,7 +10,7 @@ public class FileUploadTest extends Base_Test {
 	public FileUpload fileload;
 	
 	@Test(priority=1)
-	public void uploadTheFile()
+	public void clickOnAddNewFile()
 	{
 		try
 		{
@@ -24,33 +24,23 @@ public class FileUploadTest extends Base_Test {
 		
 	}
 	
-	/*@Test(priority=2)
-	public void dropFileHereToUpload()
-		{
-		try 
-		{
-			Thread.sleep(1000);
-			fileload.dropNewFile();
-				
-		 }
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-		}
-		*/
-	
-	@Test(priority=2)
+	@Test(priority=2,dependsOnMethods={"clickOnAddNewFile"})
 	public void enterFileLocation()
 	{
 		try
 		{
-		fileload.FileLocation(prop.getProperty("File_po"));
+		fileload.upLoadFile(prop.getProperty("File_po"));
 		}
 		catch(Exception e)
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	@Test(priority=3,dependsOnMethods={"enterFileLocation"})
+	public void clickOnProcess()
+	{
+		fileload.process();
 	}
 
 }

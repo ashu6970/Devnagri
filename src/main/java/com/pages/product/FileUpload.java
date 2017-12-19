@@ -1,13 +1,13 @@
 package com.pages.product;
 
-
-
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.main.product.Base_Test;
 
 public class FileUpload extends Base_Test{
@@ -17,6 +17,10 @@ public class FileUpload extends Base_Test{
 	
 	@FindBy(xpath="//div[contains(@class,'modal-body step-1')]/div[1]")    
 	 WebElement btn_dropNewFile;
+	
+	@FindBy(xpath="//div[contains(@class,'modal-body step-1')]/div[1]/div[1]/div[2]/button[1]")    
+	 WebElement btn_process;
+	
 	
 	public FileUpload()
 	{
@@ -40,20 +44,51 @@ public class FileUpload extends Base_Test{
 	
 	public void dropNewFile()
 	{
-		btn_dropNewFile.click();
-	}
-	
-	public void FileLocation(String location)
-	{
 		try
 		{
-			Thread.sleep(1000);
-			Actions act=new Actions(driver);
-			act.moveToElement(btn_dropNewFile);
-			act.click();
-			act.sendKeys(location);
-			act.build().perform();
-		       
+		btn_dropNewFile.click();
+		Thread.sleep(2000);
+		}
+		catch(Exception e)
+		{
+		e.printStackTrace();
+		}
+		
+	}
+	
+	public void setClipboardData(String string) {
+		
+		   StringSelection stringSelection = new StringSelection(string);
+		   Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+		}
+	
+	public void upLoadFile(String location) 
+	{
+        try
+
+        {
+            setClipboardData(location);                 //Setting clipboard with file location
+            Robot robot = new Robot();                 //native key strokes for CTRL, V and ENTER keys
+            dropNewFile();
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+        } 
+        
+        catch (Exception e) 
+        {
+        	e.printStackTrace();
+        }
+	}
+	
+	public void process()
+	{
+		try
+		{	
+	      btn_process.click();
 		}
 		catch(Exception e)
 		{
@@ -61,3 +96,4 @@ public class FileUpload extends Base_Test{
 		}
 	}
 }
+
