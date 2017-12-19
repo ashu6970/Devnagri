@@ -29,13 +29,20 @@ public class CreateProjectTest extends Base_Test {
 	@Test(priority=1)
 	public void typeProjectName()
 	{
+		try
+		{
 	createproject.enterProjectName("New Project created");
-		
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	@Test(priority=2)
 	public void projectType()
 	{
+	
 	 createproject.selectProjectType();
 	}
 	
@@ -57,8 +64,10 @@ public class CreateProjectTest extends Base_Test {
 	public void doClickOnLetsStartButton()
 	{
 		createproject.clickOnLetsStartbutton();
+		pageScrolldown();
 		String text =createproject.validateCreateProject();
 		Assert.assertEquals(text,"Add New File");
+		
 		
 	}
 

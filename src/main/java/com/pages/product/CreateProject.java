@@ -14,13 +14,13 @@ public class CreateProject extends Base_Test{
 	
 	//div[@class='text-center']/child::a[1]
 	
-	@FindBy(xpath=".//*[@id='start-project-card']/div/div/a[1]")
+	@FindBy(xpath=".//*[@id='start-project-card']/div/div/a[1]") // To the new project
 	 WebElement btn_startNewProject;
 	
-	@FindBy(xpath="//form[@id='addProjectForm']/div[1]/div[1]/div[1]/input[1]")
+	@FindBy(xpath="//form[@id='addProjectForm']/div[1]/div[1]/div[1]/input[1]") // Enter the Project name
 	  WebElement txtbn_projectName;
 	
-	@FindBy(xpath="//div[contains(@class,'row p-t-20')]/child::div[1]/div[1]/div/button")
+	@FindBy(xpath="//div[contains(@class,'row p-t-20')]/child::div[1]/div[1]/div/button") //To select the Project type
 	 WebElement btn_projectType;
 	
 	@FindBy(xpath="//div[@class='dropdown-menu show']/ul/li[2]/a/span[1]")    // To select the website
