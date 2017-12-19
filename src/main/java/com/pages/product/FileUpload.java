@@ -1,6 +1,10 @@
 package com.pages.product;
 
+
+
+
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -19,14 +23,41 @@ public class FileUpload extends Base_Test{
      PageFactory.initElements(driver, this);
 	}
 	
-	public void addNewFile()
+	public void addNewFile() throws Exception
 	{
+		try
+		{
+		Thread.sleep(1000);
 		btn_addNewFile.click();
+		}
+		
+	catch(Exception e)
+		{
+		e.printStackTrace();
+		throw(e);
+		}
+	}
+	
+	public void dropNewFile()
+	{
 		btn_dropNewFile.click();
 	}
 	
-	public void uploadFile()
+	public void FileLocation(String location)
 	{
-		
+		try
+		{
+			Thread.sleep(1000);
+			Actions act=new Actions(driver);
+			act.moveToElement(btn_dropNewFile);
+			act.click();
+			act.sendKeys(location);
+			act.build().perform();
+		       
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 }

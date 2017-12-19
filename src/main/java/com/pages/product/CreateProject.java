@@ -90,7 +90,9 @@ public class CreateProject extends Base_Test{
   
   public void selectTargetLanguage()
   {
-	  try{
+	  try
+	  {
+		Thread.sleep(1000);
 	  WebElement element = driver.findElement(By.xpath(".//*[@id='addProjectForm']/div/div[4]/div[2]/div/div/button")); 
 	  JavascriptExecutor executor = (JavascriptExecutor)driver; 
 	  executor.executeScript("arguments[0].click()", element);

@@ -2,10 +2,10 @@ package com.testcase;
 
 import org.testng.annotations.Test;
 
-
+import com.main.product.Base_Test;
 import com.pages.product.FileUpload;
 
-public class FileUploadTest {
+public class FileUploadTest extends Base_Test {
 	
 	public FileUpload fileload;
 	
@@ -23,5 +23,35 @@ public class FileUploadTest {
 		}
 		
 	}
+	
+	/*@Test(priority=2)
+	public void dropFileHereToUpload()
+		{
+		try 
+		{
+			Thread.sleep(1000);
+			fileload.dropNewFile();
+				
+		 }
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		}
+		*/
+	
+	@Test(priority=2)
+	public void enterFileLocation()
+	{
+		try
+		{
+		fileload.FileLocation(prop.getProperty("File_po"));
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
 
 }
+
