@@ -17,7 +17,10 @@ public class MakeOrderTest {
 	@Test(priority=2)
 	public void clickOnSelectAll()
 	{
+		
 		makeorder.selectAll();
+		
+		
 	}
 	
 	@Test(priority=3)
