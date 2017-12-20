@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Automation_Test_Suite">
-                    <span class="test-stats">3 tests</span>
+                    <span class="test-stats">4 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods,   11 passed</span>
+                    <span class="method-stats">12 methods,   12 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Suite" title="com.testcase.FileUploadTest" hash-for-method="clickOnAddNewFile">clickOnAddNewFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Suite" title="com.testcase.MakeOrderTest" hash-for-method="clickOnMakeOrder">clickOnMakeOrder</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -268,6 +273,21 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Automation_Test_Suite-class-passed -->
+          <div class="suite-Automation_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.testcase.MakeOrderTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickOnMakeOrder">
+                  </a> <!-- clickOnMakeOrder -->
+                  <span class="method-name">clickOnMakeOrder</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Automation_Test_Suite-class-passed -->
         </div> <!-- panel Automation_Test_Suite -->
         <div panel-name="test-xml-Automation_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -293,6 +313,11 @@
       &lt;class name=&quot;com.testcase.FileUploadTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- File Upload Testcase --&gt;
+  &lt;test name=&quot;Make An Order Testcase&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.testcase.MakeOrderTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Make An Order Testcase --&gt;
 &lt;/suite&gt; &lt;!-- Automation Test Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -311,6 +336,9 @@
               </li>
               <li>
                 <span class="test-name">File Upload Testcase (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Make An Order Testcase (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -336,56 +364,60 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(11);
+data.addRows(12);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'openBrowser')
-data.setCell(0, 2, 'com.testcase.LoginPageTest')
-data.setCell(0, 3, 33064);
+data.setCell(0, 1, 'selectFileType')
+data.setCell(0, 2, 'com.testcase.FileUploadTest')
+data.setCell(0, 3, 7026);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'doLogin')
+data.setCell(1, 1, 'openBrowser')
 data.setCell(1, 2, 'com.testcase.LoginPageTest')
-data.setCell(1, 3, 11168);
+data.setCell(1, 3, 6921);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'selectFileType')
+data.setCell(2, 1, 'enterFileLocation')
 data.setCell(2, 2, 'com.testcase.FileUploadTest')
-data.setCell(2, 3, 9880);
+data.setCell(2, 3, 5522);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'doClickOnLetsStartButton')
 data.setCell(3, 2, 'com.testcase.CreateProjectTest')
-data.setCell(3, 3, 8862);
+data.setCell(3, 3, 5488);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'enterFileLocation')
-data.setCell(4, 2, 'com.testcase.FileUploadTest')
-data.setCell(4, 3, 5504);
+data.setCell(4, 1, 'doLogin')
+data.setCell(4, 2, 'com.testcase.LoginPageTest')
+data.setCell(4, 3, 5377);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'startproject')
-data.setCell(5, 2, 'com.testcase.CreateProjectTest')
-data.setCell(5, 3, 1740);
+data.setCell(5, 1, 'clickOnMakeOrder')
+data.setCell(5, 2, 'com.testcase.MakeOrderTest')
+data.setCell(5, 3, 3161);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'industryType')
+data.setCell(6, 1, 'startproject')
 data.setCell(6, 2, 'com.testcase.CreateProjectTest')
-data.setCell(6, 3, 1227);
+data.setCell(6, 3, 1800);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'targetLanguage')
 data.setCell(7, 2, 'com.testcase.CreateProjectTest')
-data.setCell(7, 3, 1196);
+data.setCell(7, 3, 1250);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'projectType')
+data.setCell(8, 1, 'industryType')
 data.setCell(8, 2, 'com.testcase.CreateProjectTest')
-data.setCell(8, 3, 1194);
+data.setCell(8, 3, 1228);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'clickOnAddNewFile')
-data.setCell(9, 2, 'com.testcase.FileUploadTest')
-data.setCell(9, 3, 1141);
+data.setCell(9, 1, 'projectType')
+data.setCell(9, 2, 'com.testcase.CreateProjectTest')
+data.setCell(9, 3, 1210);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'typeProjectName')
-data.setCell(10, 2, 'com.testcase.CreateProjectTest')
-data.setCell(10, 3, 214);
+data.setCell(10, 1, 'clickOnAddNewFile')
+data.setCell(10, 2, 'com.testcase.FileUploadTest')
+data.setCell(10, 3, 1132);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'typeProjectName')
+data.setCell(11, 2, 'com.testcase.CreateProjectTest')
+data.setCell(11, 3, 235);
 window.suiteTableData['Automation_Test_Suite']= { tableData: data, tableDiv: 'times-div-Automation_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 40 seconds</span>
               <div id="times-div-Automation_Test_Suite">
               </div> <!-- times-div-Automation_Test_Suite -->
             </div> <!-- times-div -->
@@ -418,49 +450,56 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">doLogin</span>
-                <span class="method-start">33085 ms</span>
+                <span class="method-start">6945 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.testcase.CreateProjectTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">startproject</span>
-                <span class="method-start">44297 ms</span>
+                <span class="method-start">12343 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">typeProjectName</span>
-                <span class="method-start">46038 ms</span>
+                <span class="method-start">14145 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">projectType</span>
-                <span class="method-start">46254 ms</span>
+                <span class="method-start">14382 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">industryType</span>
-                <span class="method-start">47449 ms</span>
+                <span class="method-start">15594 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">targetLanguage</span>
-                <span class="method-start">48677 ms</span>
+                <span class="method-start">16826 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">doClickOnLetsStartButton</span>
-                <span class="method-start">49874 ms</span>
+                <span class="method-start">18078 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.testcase.FileUploadTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">clickOnAddNewFile</span>
-                <span class="method-start">58742 ms</span>
+                <span class="method-start">23576 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterFileLocation</span>
-                <span class="method-start">59886 ms</span>
+                <span class="method-start">24710 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectFileType</span>
-                <span class="method-start">65393 ms</span>
+                <span class="method-start">30233 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.testcase.MakeOrderTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">clickOnMakeOrder</span>
+                <span class="method-start">37275 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

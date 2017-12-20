@@ -20,4 +20,10 @@
 	   <class name="com.testcase.FileUploadTest"/>
 	 </classes>
 </test>
+
+<test name="Make An Order Testcase">
+	 <classes>
+	   <class name="com.testcase.MakeOrderTest"/>
+	 </classes>
+</test>
 </suite>
