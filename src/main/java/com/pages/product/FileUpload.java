@@ -4,8 +4,6 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
-import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -107,17 +105,19 @@ public class FileUpload extends Base_Test{
 	public void fileSelectionPop()
 	{
 		
+	try
+		{
 		select_dropDownListOfSelectFile.click();
 		WebElement selectDropdown = select_dropDownListOfSelectFile;
 		Select filetype=new Select(selectDropdown);
-		List<WebElement> allOptions= filetype.getOptions();
-		System.out.println(allOptions.size());
-		
-		for(int i=0;i<=allOptions.size();i++)
-		{
-			if(allOptions.get(2).equals(2))
-				selectDropdown.click();	
+		Thread.sleep(2000);
+		filetype.selectByIndex(1);
 		}
+	catch(Exception e)
+	{
+		e.printStackTrace();
+	}
+		
 		
 	}
 }

@@ -47,8 +47,17 @@ public class FileUploadTest extends Base_Test {
 	public void selectFileType()
  
 	{
-		
+		try
+		{
 		fileload.fileSelectionPop();
+		Thread.sleep(2000);
+		fileload.process();
+		driver.navigate().refresh();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 		
 	}
 
