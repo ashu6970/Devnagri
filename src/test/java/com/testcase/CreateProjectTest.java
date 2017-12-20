@@ -31,7 +31,7 @@ public class CreateProjectTest extends Base_Test {
 	{
 		try
 		{
-	createproject.enterProjectName("New Project created");
+	      createproject.enterProjectName("New Project created");
 		}
 		catch(Exception e)
 		{
@@ -42,8 +42,8 @@ public class CreateProjectTest extends Base_Test {
 	@Test(priority=2)
 	public void projectType()
 	{
-	
 	 createproject.selectProjectType();
+	 
 	}
 	
 	@Test(priority=3)
