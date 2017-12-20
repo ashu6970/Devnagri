@@ -11,8 +11,11 @@ public class MakeOrder extends Base_Test{
 	@FindBy(xpath="//div[@class='container-fluid']/child::h4[3]/a[1]")    // Click on make an order button
 	 WebElement btn_makeAnOrder;
 	
-	@FindBy(xpath="//input[@id='select-all-text-input']")    // Click on make an order button
+	@FindBy(xpath="//input[@id='select-all-text-input']")    // Choose the select all options
 	 WebElement btn_selectAll;
+	
+	@FindBy(xpath="//div[@class='col-12']")    // Click on submit button
+	 WebElement btn_submit;
 	
 	
 	public MakeOrder()
@@ -49,6 +52,18 @@ public class MakeOrder extends Base_Test{
 	public void selectFile()
 	{
 		
+	}
+	
+	public void submit()
+	{
+		try
+		{
+		btn_submit.click();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 }

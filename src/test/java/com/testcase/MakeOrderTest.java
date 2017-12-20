@@ -19,5 +19,13 @@ public class MakeOrderTest {
 	{
 		makeorder.selectAll();
 	}
+	
+	@Test(priority=3)
+	
+	public void clickOnSubmit()
+	{
+		makeorder.submit();
+	}
+	
 
 }
