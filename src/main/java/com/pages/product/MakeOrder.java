@@ -15,7 +15,7 @@ public class MakeOrder extends Base_Test{
 	 WebElement btn_selectTranslationOption;
 	
 	// Select Target Language
-	@FindBy(xpath="//div[@class='btn-group bootstrap-select show-tick fileList dropup']/button")    
+	@FindBy(xpath="//div[@class='btn-group bootstrap-select show-tick fileList']/button[1]")    
 	 WebElement btn_selectTragetLanguage;
 	
 	// Choose the Target language from drop down options
@@ -35,7 +35,7 @@ public class MakeOrder extends Base_Test{
 	 WebElement btn_selectFilesDropdown;
 	
 	// Click on submit button
-	@FindBy(xpath="//div[@class='col-12']")    
+	@FindBy(xpath="//div[@class='col-6 offset-4']/div[1]/input[1]")    
 	 WebElement btn_submit;
 	
 	
@@ -90,9 +90,11 @@ public class MakeOrder extends Base_Test{
 	{
 		try
 		{
+		Thread.sleep(2000);
 		btn_selectTragetLanguage.click();
 		Thread.sleep(2000);
 		btn_selectTargetLanuageFromDropdown.click();
+		btn_selectTragetLanguage.click();
 		}
 		catch(Exception e)
 		{
