@@ -12,13 +12,14 @@ public class MakeOrderTest {
 	{
 		makeorder=new MakeOrder();
 		makeorder.makeAnOrder();
+		
 	}
 	 
 	@Test(priority=2)
-	public void clickOnSelectAll()
+	public void clickOnTagetLanguage()
 	{
 		
-		makeorder.selectAll();
+		makeorder.targetLanguage();
 		
 		
 	}

@@ -23,6 +23,8 @@ public class LoginPage extends Base_Test {
 	@FindBy(xpath=".//*[@id='start-project-card']/div/div/a[1]")
 	WebElement valid;
 	
+	//form [@id='loginform']/div[1]/div[1]/span[1]   for negative test case
+	
 	public LoginPage()
 	{
 		PageFactory.initElements(driver, this);

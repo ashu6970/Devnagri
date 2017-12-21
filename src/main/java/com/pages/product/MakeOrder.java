@@ -6,23 +6,36 @@ import com.main.product.Base_Test;
 
 public class MakeOrder extends Base_Test{
 	
-	@FindBy(xpath="//div[@class='container-fluid']/child::h4[3]/a[1]")    // Click on make an order button
+	 // Click on make an order button
+	@FindBy(xpath="//div[@class='container-fluid']/child::h4[3]/a[1]")   
 	 WebElement btn_makeAnOrder;
 	
-	@FindBy(xpath="//input[@id='select-all-text-input']")    // Choose the select all options
+	//  Please Select Translation option
+	@FindBy(xpath="//div[@class='form-group row content-margin']/div/select[1]")    
+	 WebElement btn_selectTranslationOption;
+	
+	// Select Target Language
+	@FindBy(xpath="//div[@class='btn-group bootstrap-select show-tick fileList dropup']/button")    
+	 WebElement btn_selectTragetLanguage;
+	
+	// Choose the Target language from drop down options
+	@FindBy(xpath="//div[@class='btn-group bootstrap-select show-tick fileList show']/div[1]/ul[1]/li[1]/a[1]/span[1]")    
+	 WebElement btn_selectTargetLanuageFromDropdown;
+	
+	// Choose the select all options
+	@FindBy(xpath="//input[@id='select-all-text-input']")    
 	 WebElement btn_selectAll;
 	
-	@FindBy(xpath="//input[@id='added-after-text-input']")    // Choose the select file options
+	// Choose the select file options
+	@FindBy(xpath="//input[@id='added-after-text-input']")    
 	 WebElement btn_selectFiles;
 	
-	@FindBy(xpath="//div[@class='col-7']/div[1]")    // Choose the select files from drop down options
+	// Choose the select files from drop down options
+	@FindBy(xpath="//div[@class='col-7']/div[1]")    
 	 WebElement btn_selectFilesDropdown;
 	
-	@FindBy(xpath="//div[@class='btn-group bootstrap-select show-tick fileList show']/div[1]/ul[1]/li[1]/a[1]/span[1]")    // Choose the select files from drop down options
-	 WebElement btn_selectFilesFromDropdown;
-	
-	
-	@FindBy(xpath="//div[@class='col-12']")    // Click on submit button
+	// Click on submit button
+	@FindBy(xpath="//div[@class='col-12']")    
 	 WebElement btn_submit;
 	
 	
@@ -64,13 +77,27 @@ public class MakeOrder extends Base_Test{
 		btn_selectFiles.click();
 		btn_selectFilesDropdown.click();
 		Thread.sleep(3000);
-		btn_selectFilesFromDropdown.click();
+		//btn_selectFilesFromDropdown.click();
 		}
 		catch(Exception e)
 		{
 			e.printStackTrace();
 		}
 	
+	}
+	public void targetLanguage()
+	
+	{
+		try
+		{
+		btn_selectTragetLanguage.click();
+		Thread.sleep(2000);
+		btn_selectTargetLanuageFromDropdown.click();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 	
 	public void submit()
