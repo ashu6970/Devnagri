@@ -25,6 +25,10 @@ public class FileUpload extends Base_Test{
 	@FindBy(xpath="//select[@id='select']")    
 	 WebElement select_dropDownListOfSelectFile;
 	
+	@FindBy(xpath="//h4[@class='modal-title step-1']")    
+	 WebElement valid;
+	
+	
 	
 	
 	public FileUpload()
@@ -120,6 +124,12 @@ public class FileUpload extends Base_Test{
 		
 		
 	}
+	 public String Validate()
+	    {
+	    	 waitForPageLoaded();
+	    	 return valid.getText();
+	    	
+	    }
 	
 }
 

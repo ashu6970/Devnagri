@@ -1,5 +1,6 @@
 package com.testcase;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.main.product.Base_Test;
@@ -16,6 +17,9 @@ public class FileUploadTest extends Base_Test {
 		{
 		fileload =new FileUpload();
 		fileload.addNewFile();
+		String txt= fileload.Validate();
+		Assert.assertEquals(txt, "Upload a new file");
+		System.out.println(txt);
 		}
 		catch(Exception e)
 		{

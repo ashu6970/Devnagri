@@ -25,6 +25,7 @@ public class LoginPageTest extends Base_Test{
 		waitForPageLoaded();
 	    String tittle = loginpage.Validate();
 		Assert.assertEquals(tittle, "Start New Project");
+		System.out.println(tittle);
 		
 	}
     

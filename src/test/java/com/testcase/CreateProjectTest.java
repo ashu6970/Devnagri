@@ -19,6 +19,7 @@ public class CreateProjectTest extends Base_Test {
 		    createproject.startNewProject();
 		    String url = driver.getCurrentUrl();
 			Assert.assertEquals(url,"http://dev.devnagri.co.in/projects/start");
+			System.out.println(url);
 	}
 		catch(Exception e)
 		{
@@ -68,6 +69,7 @@ public class CreateProjectTest extends Base_Test {
 		String text =createproject.validateCreateProject();
 		Assert.assertEquals(text,"Add New File");
 		Thread.sleep(1000);
+		System.out.println(text);
 		
 		
 	}
