@@ -38,6 +38,16 @@ public class MakeOrder extends Base_Test{
 	@FindBy(xpath="//div[@class='col-6 offset-4']/div[1]/input[1]")    
 	 WebElement btn_submit;
 	
+	// click for place order
+	@FindBy(xpath="//i[@class='mdi mdi-chevron-double-left']//ancestor::a")    
+	 WebElement btn_placeOrderNow;
+	
+	// For Validation
+	
+	@FindBy(xpath="//i[@class='mdi mdi-chevron-double-left']//ancestor::a")    
+	 WebElement valid;
+	
+	
 	
 	public MakeOrder()
 	{
@@ -107,6 +117,7 @@ public class MakeOrder extends Base_Test{
 		try
 		{
 		btn_submit.click();
+		Thread.sleep(3000);
 		}
 		catch(Exception e)
 		{
@@ -114,4 +125,21 @@ public class MakeOrder extends Base_Test{
 		}
 	}
 
+	public void placeAnOrder()
+	{
+		try
+		{
+		btn_placeOrderNow.click();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	 public String Validate()
+	    {
+	    	 waitForPageLoaded();
+	    	 return valid.getText();
+	    }
 }

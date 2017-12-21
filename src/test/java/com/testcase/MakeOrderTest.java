@@ -1,5 +1,6 @@
 package com.testcase;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.pages.product.MakeOrder;
@@ -29,7 +30,16 @@ public class MakeOrderTest {
 	public void clickOnSubmit()
 	{
 		makeorder.submit();
+		String txt=makeorder.Validate();
+		Assert.assertEquals(txt, "Place Order Now");
 	}
 	
+    @Test(priority=4)
+	
+	public void clickOnPlaceOrderNow()
+	{
+    	makeorder.placeAnOrder();
+    	
+	}
 
 }
