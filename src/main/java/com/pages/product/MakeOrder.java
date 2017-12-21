@@ -1,4 +1,6 @@
 package com.pages.product;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -104,7 +106,6 @@ public class MakeOrder extends Base_Test{
 		btn_selectTragetLanguage.click();
 		Thread.sleep(2000);
 		btn_selectTargetLanuageFromDropdown.click();
-		btn_selectTragetLanguage.click();
 		}
 		catch(Exception e)
 		{
@@ -116,8 +117,10 @@ public class MakeOrder extends Base_Test{
 	{
 		try
 		{
-		btn_submit.click();
-		Thread.sleep(3000);
+			 WebElement element1= driver.findElement(By.xpath("//div[@class='col-6 offset-4']/div[1]/input[1]")); 
+			  JavascriptExecutor executor1 = (JavascriptExecutor)driver; 
+			  executor1.executeScript("arguments[0].click()", element1);
+		
 		}
 		catch(Exception e)
 		{
@@ -129,6 +132,7 @@ public class MakeOrder extends Base_Test{
 	{
 		try
 		{
+			Thread.sleep(4000);
 		btn_placeOrderNow.click();
 		}
 		catch(Exception e)

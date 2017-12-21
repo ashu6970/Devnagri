@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" name="Failed suite [Automation Test Suite]">
-  <test name="File Upload Testcase(failed)">
-    <classes>
-      <class name="com.testcase.FileUploadTest">
-        <methods>
-          <include name="clickOnAddNewFile"/>
-          <include name="selectFileType"/>
-          <include name="enterFileLocation"/>
-        </methods>
-      </class> <!-- com.testcase.FileUploadTest -->
-    </classes>
-  </test> <!-- File Upload Testcase(failed) -->
   <test name="Make An Order Testcase(failed)">
     <classes>
       <class name="com.testcase.MakeOrderTest">
