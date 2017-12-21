@@ -17,6 +17,7 @@ public class FileUploadTest extends Base_Test {
 		{
 		fileload =new FileUpload();
 		fileload.addNewFile();
+		Thread.sleep(3000);
 		String txt= fileload.Validate();
 		Assert.assertEquals(txt, "Upload a new file");
 		System.out.println(txt);

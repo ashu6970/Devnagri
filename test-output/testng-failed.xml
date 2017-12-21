@@ -12,4 +12,13 @@
       </class> <!-- com.testcase.FileUploadTest -->
     </classes>
   </test> <!-- File Upload Testcase(failed) -->
+  <test name="Make An Order Testcase(failed)">
+    <classes>
+      <class name="com.testcase.MakeOrderTest">
+        <methods>
+          <include name="clickOnSubmit"/>
+        </methods>
+      </class> <!-- com.testcase.MakeOrderTest -->
+    </classes>
+  </test> <!-- Make An Order Testcase(failed) -->
 </suite> <!-- Failed suite [Automation Test Suite] -->
