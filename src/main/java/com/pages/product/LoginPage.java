@@ -1,6 +1,4 @@
 package com.pages.product;
-
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -22,9 +20,7 @@ public class LoginPage extends Base_Test {
 	
 	@FindBy(xpath=".//*[@id='start-project-card']/div/div/a[1]")
 	WebElement valid;
-	
-	//form [@id='loginform']/div[1]/div[1]/span[1]   for negative test case
-	
+		
 	public LoginPage()
 	{
 		PageFactory.initElements(driver, this);

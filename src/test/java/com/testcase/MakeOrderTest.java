@@ -11,17 +11,13 @@ public class MakeOrderTest {
 	public void clickOnMakeOrder()
 	{
 		makeorder=new MakeOrder();
-		makeorder.makeAnOrder();
-		
+		makeorder.makeAnOrder();	
 	}
 	 
 	@Test(priority=2)
 	public void clickOnTagetLanguage()
 	{
-		
-		makeorder.targetLanguage();
-		
-		
+		makeorder.targetLanguage();	
 	}
 	
 	@Test(priority=3)
@@ -35,10 +31,8 @@ public class MakeOrderTest {
 	}
 	
     @Test(priority=4)
-	
 	public void clickOnPlaceOrderNow()
 	{
-    	
     	makeorder.placeAnOrder();
     	
 	}

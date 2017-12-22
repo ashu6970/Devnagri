@@ -28,7 +28,7 @@ public class LoginPageTest extends Base_Test{
 		System.out.println(tittle);
 		
 	}
-    
+	  
 }
 
 
