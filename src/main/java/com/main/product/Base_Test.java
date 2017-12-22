@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -76,6 +77,29 @@ public class Base_Test {
    {
 	   JavascriptExecutor up = (JavascriptExecutor)driver;
 	   up.executeScript("scroll(0, -500);");
+   }
+   
+   
+   public static void JavaScriptClick(WebElement element) throws Exception 
+   {
+ 		try 
+ 		{
+ 			if (element.isEnabled() && element.isDisplayed())
+ 			{
+ 				System.out.println("Clicking on element with using java script click");
+
+ 				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+ 			} 
+ 			else 
+ 			{
+ 				System.out.println("Unable to click on element");
+ 			}
+ 		}  
+ 		 catch (Exception e) 
+ 		{
+ 			System.out.println("Unable to click on element "+ e.getStackTrace());
+ 		}
+
    }
  
    }

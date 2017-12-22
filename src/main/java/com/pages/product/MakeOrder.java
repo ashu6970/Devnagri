@@ -46,7 +46,7 @@ public class MakeOrder extends Base_Test{
 	
 	// For Validation
 	
-	@FindBy(xpath="//i[@class='mdi mdi-chevron-double-left']//ancestor::a")    
+	@FindBy(xpath="//i[@class='mdi mdi-chevron-double-left']//ancestor::a/i[1]")    
 	 WebElement valid;
 	
 	
@@ -134,7 +134,9 @@ public class MakeOrder extends Base_Test{
 		{
 		Thread.sleep(4000);
 		
-		btn_placeOrderNow.click();
+		WebElement element2= driver.findElement(By.xpath("html/body/div[2]/div[2]/div/div[2]/div/div[5]/div/a")); 
+		  JavascriptExecutor executor2 = (JavascriptExecutor)driver; 
+		  executor2.executeScript("arguments[0].click()", element2);
 		}
 		catch(Exception e)
 		{

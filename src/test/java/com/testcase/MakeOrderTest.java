@@ -31,6 +31,7 @@ public class MakeOrderTest {
 		makeorder.submit();
 		String txt=makeorder.Validate();
 		Assert.assertEquals(txt, "Place Order Now");
+		System.out.println(txt);
 	}
 	
     @Test(priority=4)
