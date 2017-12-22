@@ -2,7 +2,6 @@ package com.testcase;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.pages.product.MakeOrder;
 
 public class MakeOrderTest {
@@ -38,6 +37,7 @@ public class MakeOrderTest {
 	
 	public void clickOnPlaceOrderNow()
 	{
+    	
     	makeorder.placeAnOrder();
     	
 	}

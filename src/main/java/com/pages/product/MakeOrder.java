@@ -133,6 +133,7 @@ public class MakeOrder extends Base_Test{
 		try
 		{
 		Thread.sleep(4000);
+		
 		btn_placeOrderNow.click();
 		}
 		catch(Exception e)

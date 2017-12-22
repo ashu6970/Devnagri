@@ -2,80 +2,80 @@
 <testng-results skipped="0" failed="0" ignored="0" total="15" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="Automation Test Suite" duration-ms="57718" started-at="2017-12-21T11:24:54Z" finished-at="2017-12-21T11:25:52Z">
+  <suite name="Automation Test Suite" duration-ms="65484" started-at="2017-12-22T05:18:49Z" finished-at="2017-12-22T05:19:54Z">
     <groups>
     </groups>
-    <test name="Login Testcase" duration-ms="12579" started-at="2017-12-21T11:24:54Z" finished-at="2017-12-21T11:25:07Z">
+    <test name="Login Testcase" duration-ms="19552" started-at="2017-12-22T05:18:49Z" finished-at="2017-12-22T05:19:09Z">
       <class name="com.testcase.LoginPageTest">
-        <test-method status="PASS" signature="openBrowser()[pri:1, instance:com.testcase.LoginPageTest@68c4039c]" name="openBrowser" duration-ms="5701" started-at="2017-12-21T16:54:54Z" finished-at="2017-12-21T16:55:00Z">
+        <test-method status="PASS" signature="openBrowser()[pri:1, instance:com.testcase.LoginPageTest@68c4039c]" name="openBrowser" duration-ms="13941" started-at="2017-12-22T10:48:49Z" finished-at="2017-12-22T10:49:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="doLogin()[pri:2, instance:com.testcase.LoginPageTest@68c4039c]" name="doLogin" duration-ms="6807" started-at="2017-12-21T16:55:00Z" finished-at="2017-12-21T16:55:07Z">
+        <test-method status="PASS" signature="doLogin()[pri:2, instance:com.testcase.LoginPageTest@68c4039c]" name="doLogin" duration-ms="5554" started-at="2017-12-22T10:49:03Z" finished-at="2017-12-22T10:49:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLogin -->
       </class> <!-- com.testcase.LoginPageTest -->
     </test> <!-- Login Testcase -->
-    <test name="Create Project Testcase" duration-ms="12586" started-at="2017-12-21T11:25:07Z" finished-at="2017-12-21T11:25:19Z">
+    <test name="Create Project Testcase" duration-ms="11493" started-at="2017-12-22T05:19:09Z" finished-at="2017-12-22T05:19:20Z">
       <class name="com.testcase.CreateProjectTest">
-        <test-method status="PASS" signature="startproject()[pri:0, instance:com.testcase.CreateProjectTest@239963d8]" name="startproject" duration-ms="2186" started-at="2017-12-21T16:55:07Z" finished-at="2017-12-21T16:55:09Z">
+        <test-method status="PASS" signature="startproject()[pri:0, instance:com.testcase.CreateProjectTest@239963d8]" name="startproject" duration-ms="2159" started-at="2017-12-22T10:49:09Z" finished-at="2017-12-22T10:49:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startproject -->
-        <test-method status="PASS" signature="typeProjectName()[pri:1, instance:com.testcase.CreateProjectTest@239963d8]" name="typeProjectName" duration-ms="186" started-at="2017-12-21T16:55:09Z" finished-at="2017-12-21T16:55:09Z">
+        <test-method status="PASS" signature="typeProjectName()[pri:1, instance:com.testcase.CreateProjectTest@239963d8]" name="typeProjectName" duration-ms="178" started-at="2017-12-22T10:49:11Z" finished-at="2017-12-22T10:49:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- typeProjectName -->
-        <test-method status="PASS" signature="projectType()[pri:2, instance:com.testcase.CreateProjectTest@239963d8]" name="projectType" duration-ms="1211" started-at="2017-12-21T16:55:09Z" finished-at="2017-12-21T16:55:10Z">
+        <test-method status="PASS" signature="projectType()[pri:2, instance:com.testcase.CreateProjectTest@239963d8]" name="projectType" duration-ms="1182" started-at="2017-12-22T10:49:11Z" finished-at="2017-12-22T10:49:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- projectType -->
-        <test-method status="PASS" signature="industryType()[pri:3, instance:com.testcase.CreateProjectTest@239963d8]" name="industryType" duration-ms="1193" started-at="2017-12-21T16:55:10Z" finished-at="2017-12-21T16:55:12Z">
+        <test-method status="PASS" signature="industryType()[pri:3, instance:com.testcase.CreateProjectTest@239963d8]" name="industryType" duration-ms="1196" started-at="2017-12-22T10:49:12Z" finished-at="2017-12-22T10:49:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- industryType -->
-        <test-method status="PASS" signature="targetLanguage()[pri:4, instance:com.testcase.CreateProjectTest@239963d8]" name="targetLanguage" duration-ms="1201" started-at="2017-12-21T16:55:12Z" finished-at="2017-12-21T16:55:13Z">
+        <test-method status="PASS" signature="targetLanguage()[pri:4, instance:com.testcase.CreateProjectTest@239963d8]" name="targetLanguage" duration-ms="1214" started-at="2017-12-22T10:49:13Z" finished-at="2017-12-22T10:49:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- targetLanguage -->
-        <test-method status="PASS" signature="doClickOnLetsStartButton()[pri:5, instance:com.testcase.CreateProjectTest@239963d8]" name="doClickOnLetsStartButton" duration-ms="6586" started-at="2017-12-21T16:55:13Z" finished-at="2017-12-21T16:55:19Z">
+        <test-method status="PASS" signature="doClickOnLetsStartButton()[pri:5, instance:com.testcase.CreateProjectTest@239963d8]" name="doClickOnLetsStartButton" duration-ms="5541" started-at="2017-12-22T10:49:15Z" finished-at="2017-12-22T10:49:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doClickOnLetsStartButton -->
       </class> <!-- com.testcase.CreateProjectTest -->
     </test> <!-- Create Project Testcase -->
-    <test name="File Upload Testcase" duration-ms="17021" started-at="2017-12-21T11:25:19Z" finished-at="2017-12-21T11:25:36Z">
+    <test name="File Upload Testcase" duration-ms="17271" started-at="2017-12-22T05:19:20Z" finished-at="2017-12-22T05:19:37Z">
       <class name="com.testcase.FileUploadTest">
-        <test-method status="PASS" signature="clickOnAddNewFile()[pri:1, instance:com.testcase.FileUploadTest@553f17c]" name="clickOnAddNewFile" duration-ms="4174" started-at="2017-12-21T16:55:19Z" finished-at="2017-12-21T16:55:24Z">
+        <test-method status="PASS" signature="clickOnAddNewFile()[pri:1, instance:com.testcase.FileUploadTest@553f17c]" name="clickOnAddNewFile" duration-ms="4224" started-at="2017-12-22T10:49:20Z" finished-at="2017-12-22T10:49:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnAddNewFile -->
-        <test-method status="PASS" signature="enterFileLocation()[pri:2, instance:com.testcase.FileUploadTest@553f17c]" name="enterFileLocation" duration-ms="5427" started-at="2017-12-21T16:55:24Z" depends-on-methods="com.testcase.FileUploadTest.clickOnAddNewFile" finished-at="2017-12-21T16:55:29Z">
+        <test-method status="PASS" signature="enterFileLocation()[pri:2, instance:com.testcase.FileUploadTest@553f17c]" name="enterFileLocation" duration-ms="6217" started-at="2017-12-22T10:49:24Z" depends-on-methods="com.testcase.FileUploadTest.clickOnAddNewFile" finished-at="2017-12-22T10:49:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterFileLocation -->
-        <test-method status="PASS" signature="selectFileType()[pri:3, instance:com.testcase.FileUploadTest@553f17c]" name="selectFileType" duration-ms="7413" started-at="2017-12-21T16:55:29Z" depends-on-methods="com.testcase.FileUploadTest.enterFileLocation" finished-at="2017-12-21T16:55:36Z">
+        <test-method status="PASS" signature="selectFileType()[pri:3, instance:com.testcase.FileUploadTest@553f17c]" name="selectFileType" duration-ms="6823" started-at="2017-12-22T10:49:31Z" depends-on-methods="com.testcase.FileUploadTest.enterFileLocation" finished-at="2017-12-22T10:49:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectFileType -->
       </class> <!-- com.testcase.FileUploadTest -->
     </test> <!-- File Upload Testcase -->
-    <test name="Make An Order Testcase" duration-ms="15493" started-at="2017-12-21T11:25:37Z" finished-at="2017-12-21T11:25:52Z">
+    <test name="Make An Order Testcase" duration-ms="17121" started-at="2017-12-22T05:19:37Z" finished-at="2017-12-22T05:19:54Z">
       <class name="com.testcase.MakeOrderTest">
-        <test-method status="PASS" signature="clickOnMakeOrder()[pri:1, instance:com.testcase.MakeOrderTest@73ad2d6]" name="clickOnMakeOrder" duration-ms="4274" started-at="2017-12-21T16:55:37Z" finished-at="2017-12-21T16:55:41Z">
+        <test-method status="PASS" signature="clickOnMakeOrder()[pri:1, instance:com.testcase.MakeOrderTest@73ad2d6]" name="clickOnMakeOrder" duration-ms="4256" started-at="2017-12-22T10:49:37Z" finished-at="2017-12-22T10:49:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnMakeOrder -->
-        <test-method status="PASS" signature="clickOnTagetLanguage()[pri:2, instance:com.testcase.MakeOrderTest@73ad2d6]" name="clickOnTagetLanguage" duration-ms="4238" started-at="2017-12-21T16:55:41Z" finished-at="2017-12-21T16:55:45Z">
+        <test-method status="PASS" signature="clickOnTagetLanguage()[pri:2, instance:com.testcase.MakeOrderTest@73ad2d6]" name="clickOnTagetLanguage" duration-ms="4209" started-at="2017-12-22T10:49:42Z" finished-at="2017-12-22T10:49:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnTagetLanguage -->
-        <test-method status="PASS" signature="clickOnSubmit()[pri:3, instance:com.testcase.MakeOrderTest@73ad2d6]" name="clickOnSubmit" duration-ms="2760" started-at="2017-12-21T16:55:45Z" finished-at="2017-12-21T16:55:48Z">
+        <test-method status="PASS" signature="clickOnSubmit()[pri:3, instance:com.testcase.MakeOrderTest@73ad2d6]" name="clickOnSubmit" duration-ms="1915" started-at="2017-12-22T10:49:46Z" finished-at="2017-12-22T10:49:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnSubmit -->
-        <test-method status="PASS" signature="clickOnPlaceOrderNow()[pri:4, instance:com.testcase.MakeOrderTest@73ad2d6]" name="clickOnPlaceOrderNow" duration-ms="4212" started-at="2017-12-21T16:55:48Z" finished-at="2017-12-21T16:55:52Z">
+        <test-method status="PASS" signature="clickOnPlaceOrderNow()[pri:4, instance:com.testcase.MakeOrderTest@73ad2d6]" name="clickOnPlaceOrderNow" duration-ms="6732" started-at="2017-12-22T10:49:48Z" finished-at="2017-12-22T10:49:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnPlaceOrderNow -->
