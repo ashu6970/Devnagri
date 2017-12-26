@@ -134,10 +134,8 @@ public class MakeOrder extends Base_Test{
 	{
 		try
 		{
-		
-		WebElement element2= driver.findElement(By.xpath("html/body/div[2]/div[2]/div/div[2]/div/div[5]/div/a")); 
-		  JavascriptExecutor executor2 = (JavascriptExecutor)driver; 
-		  executor2.executeScript("arguments[0].click()", element2);
+		WebElement goToButton= driver.findElement(By.xpath("//*[@id='main-wrapper']/div[2]/div/div[2]/div/div[5]/div/a[1]"));
+		javaScriptClick(goToButton);
 		}
 		catch(Exception e)
 		{
