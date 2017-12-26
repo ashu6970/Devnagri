@@ -120,10 +120,9 @@ public class FileUpload extends Base_Test{
 	catch(Exception e)
 	{
 		e.printStackTrace();
-	}
-		
-		
-	}
+	}	
+		}
+	
 	 public String Validate()
 	    {
 	    	 waitForPageLoaded();

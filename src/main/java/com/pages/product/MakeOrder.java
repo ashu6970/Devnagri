@@ -41,12 +41,12 @@ public class MakeOrder extends Base_Test{
 	 WebElement btn_submit;
 	
 	// click for place order
-	@FindBy(xpath="html/body/div[2]/div[2]/div/div[2]/div/div[5]/div/a")    
+	@FindBy(xpath="//*[@id='main-wrapper']/div[2]/div/div[2]/div/div[5]/div/a[1]")    
 	 WebElement btn_placeOrderNow;
 	
 	// For Validation
 	
-	@FindBy(xpath="html/body/div[2]/div[2]/div/div[2]/div/div[5]/div/a")    
+	@FindBy(xpath="//*[@id='main-wrapper']/div[2]/div/div[2]/div/div[5]/div/a[1]")    
 	 WebElement valid;
 	
 	

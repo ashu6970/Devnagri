@@ -80,7 +80,7 @@ public class Base_Test {
    }
    
    
-   public static void JavaScriptClick(WebElement element) throws Exception 
+   public static void javaScriptClick(WebElement element) throws Exception 
    {
  		try 
  		{
