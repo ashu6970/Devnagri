@@ -1,6 +1,5 @@
 package com.pages.product;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -117,9 +116,8 @@ public class MakeOrder extends Base_Test{
 	{
 		try
 		{
-			 WebElement element1= driver.findElement(By.xpath("//*[@id='order-submit-input']")); 
-			  JavascriptExecutor executor1 = (JavascriptExecutor)driver;
-			  executor1.executeScript("arguments[0].click()", element1);
+			 WebElement goToButton= driver.findElement(By.xpath("//*[@id='order-submit-input']")); 
+			 javaScriptClick(goToButton);
 			  Thread.sleep(3000);
 			
 		}

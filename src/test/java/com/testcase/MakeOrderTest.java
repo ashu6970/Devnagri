@@ -23,7 +23,6 @@ public class MakeOrderTest extends Base_Test {
 	}
 	
 	@Test(priority=3)
-	
 	public void clickOnSubmit()
 	{
 		makeorder.submit();
