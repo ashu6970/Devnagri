@@ -117,11 +117,11 @@ public class MakeOrder extends Base_Test{
 	{
 		try
 		{
-			 WebElement element1= driver.findElement(By.xpath("//div[@class='col-6 offset-4']/div[1]/input[1]")); 
-			  JavascriptExecutor executor1 = (JavascriptExecutor)driver; 
+			 WebElement element1= driver.findElement(By.xpath("//*[@id='order-submit-input']")); 
+			  JavascriptExecutor executor1 = (JavascriptExecutor)driver;
 			  executor1.executeScript("arguments[0].click()", element1);
 			  Thread.sleep(3000);
-		
+			
 		}
 		
 		catch(Exception e)
@@ -134,8 +134,7 @@ public class MakeOrder extends Base_Test{
 	{
 		try
 		{
-		Thread.sleep(4000);
-		pageScrolldown();
+		
 		WebElement element2= driver.findElement(By.xpath("html/body/div[2]/div[2]/div/div[2]/div/div[5]/div/a")); 
 		  JavascriptExecutor executor2 = (JavascriptExecutor)driver; 
 		  executor2.executeScript("arguments[0].click()", element2);

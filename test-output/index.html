@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Automation_Test_Suite">
-              <span class="suite-name border-passed">Automation Test Suite</span>
+              <span class="suite-name border-failed">Automation Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">15 methods,   15 passed</span>
+                    <span class="method-stats">15 methods, 1 failed,   14 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Automation_Test_Suite" class="hide-methods failed suite-Automation_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Automation_Test_Suite -->
+                      <a href="#" panel-name="suite-Automation_Test_Suite" class="show-methods failed suite-Automation_Test_Suite"> (show)</a> <!-- show-methods failed suite-Automation_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Automation_Test_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Suite" title="com.testcase.MakeOrderTest" hash-for-method="clickOnSubmit">clickOnSubmit</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Automation_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -113,11 +127,6 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Suite" title="com.testcase.MakeOrderTest" hash-for-method="clickOnPlaceOrderNow">clickOnPlaceOrderNow</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Automation_Test_Suite" title="com.testcase.MakeOrderTest" hash-for-method="clickOnSubmit">clickOnSubmit</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -187,6 +196,51 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Automation_Test_Suite" class="panel Automation_Test_Suite">
+          <div class="suite-Automation_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.testcase.MakeOrderTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickOnSubmit">
+                  </a> <!-- clickOnSubmit -->
+                  <span class="method-name">clickOnSubmit</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;html/body/div[2]/div[2]/div/div[2]/div/div[5]/div/a&quot;}
+  (Session info: chrome=63.0.3239.84)
+  (Driver info: chromedriver=2.34.522913 (36222509aa6e819815938cbf2709b4849735537c),platform=Linux 4.4.0-104-generic x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T18:33:54.468Z&apos;
+System info: host: &apos;fourtek-desktop&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.4.0-104-generic&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.34.522913 (36222509aa6e81..., userDataDir: /tmp/.org.chromium.Chromium...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 63.0.3239.84, webStorageEnabled: true}
+Session ID: fc600687ee5eb7e5ad793ca8bd411060
+*** Element info: {Using=xpath, value=html/body/div[2]/div[2]/div/div[2]/div/div[5]/div/a}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy7.getText(Unknown Source)
+	at com.pages.product.MakeOrder.Validate(MakeOrder.java:151)
+	at com.testcase.MakeOrderTest.clickOnSubmit(MakeOrderTest.java:30)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Automation_Test_Suite-class-failed -->
           <div class="suite-Automation_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -205,13 +259,6 @@
                   <a name="clickOnPlaceOrderNow">
                   </a> <!-- clickOnPlaceOrderNow -->
                   <span class="method-name">clickOnPlaceOrderNow</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="clickOnSubmit">
-                  </a> <!-- clickOnSubmit -->
-                  <span class="method-name">clickOnSubmit</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -402,65 +449,65 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(15);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'openBrowser')
-data.setCell(0, 2, 'com.testcase.LoginPageTest')
-data.setCell(0, 3, 16259);
+data.setCell(0, 1, 'clickOnSubmit')
+data.setCell(0, 2, 'com.testcase.MakeOrderTest')
+data.setCell(0, 3, 25226);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'clickOnPlaceOrderNow')
-data.setCell(1, 2, 'com.testcase.MakeOrderTest')
-data.setCell(1, 3, 7084);
+data.setCell(1, 1, 'openBrowser')
+data.setCell(1, 2, 'com.testcase.LoginPageTest')
+data.setCell(1, 3, 20206);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'selectFileType')
-data.setCell(2, 2, 'com.testcase.FileUploadTest')
-data.setCell(2, 3, 7053);
+data.setCell(2, 1, 'doClickOnLetsStartButton')
+data.setCell(2, 2, 'com.testcase.CreateProjectTest')
+data.setCell(2, 3, 6861);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'enterFileLocation')
-data.setCell(3, 2, 'com.testcase.FileUploadTest')
-data.setCell(3, 3, 6008);
+data.setCell(3, 1, 'doLogin')
+data.setCell(3, 2, 'com.testcase.LoginPageTest')
+data.setCell(3, 3, 6817);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'doLogin')
-data.setCell(4, 2, 'com.testcase.LoginPageTest')
-data.setCell(4, 3, 5933);
+data.setCell(4, 1, 'selectFileType')
+data.setCell(4, 2, 'com.testcase.FileUploadTest')
+data.setCell(4, 3, 6814);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'doClickOnLetsStartButton')
-data.setCell(5, 2, 'com.testcase.CreateProjectTest')
-data.setCell(5, 3, 5706);
+data.setCell(5, 1, 'enterFileLocation')
+data.setCell(5, 2, 'com.testcase.FileUploadTest')
+data.setCell(5, 3, 5489);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'clickOnSubmit')
+data.setCell(6, 1, 'clickOnMakeOrder')
 data.setCell(6, 2, 'com.testcase.MakeOrderTest')
-data.setCell(6, 3, 5131);
+data.setCell(6, 3, 4453);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'clickOnMakeOrder')
+data.setCell(7, 1, 'clickOnTagetLanguage')
 data.setCell(7, 2, 'com.testcase.MakeOrderTest')
-data.setCell(7, 3, 4613);
+data.setCell(7, 3, 4281);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'clickOnAddNewFile')
 data.setCell(8, 2, 'com.testcase.FileUploadTest')
-data.setCell(8, 3, 4269);
+data.setCell(8, 3, 4205);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'clickOnTagetLanguage')
-data.setCell(9, 2, 'com.testcase.MakeOrderTest')
-data.setCell(9, 3, 4246);
+data.setCell(9, 1, 'startproject')
+data.setCell(9, 2, 'com.testcase.CreateProjectTest')
+data.setCell(9, 3, 2613);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'startproject')
-data.setCell(10, 2, 'com.testcase.CreateProjectTest')
-data.setCell(10, 3, 1745);
+data.setCell(10, 1, 'clickOnPlaceOrderNow')
+data.setCell(10, 2, 'com.testcase.MakeOrderTest')
+data.setCell(10, 3, 1779);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'projectType')
 data.setCell(11, 2, 'com.testcase.CreateProjectTest')
-data.setCell(11, 3, 1226);
+data.setCell(11, 3, 1282);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'industryType')
+data.setCell(12, 1, 'targetLanguage')
 data.setCell(12, 2, 'com.testcase.CreateProjectTest')
-data.setCell(12, 3, 1216);
+data.setCell(12, 3, 1258);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'targetLanguage')
+data.setCell(13, 1, 'industryType')
 data.setCell(13, 2, 'com.testcase.CreateProjectTest')
-data.setCell(13, 3, 1202);
+data.setCell(13, 3, 1255);
 data.setCell(14, 0, 14)
 data.setCell(14, 1, 'typeProjectName')
 data.setCell(14, 2, 'com.testcase.CreateProjectTest')
-data.setCell(14, 3, 222);
+data.setCell(14, 3, 249);
 window.suiteTableData['Automation_Test_Suite']= { tableData: data, tableDiv: 'times-div-Automation_Test_Suite'}
 return data;
 }
@@ -498,68 +545,70 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">doLogin</span>
-                <span class="method-start">16277 ms</span>
+                <span class="method-start">20210 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.testcase.CreateProjectTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">startproject</span>
-                <span class="method-start">22267 ms</span>
+                <span class="method-start">27050 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">typeProjectName</span>
-                <span class="method-start">24014 ms</span>
+                <span class="method-start">29665 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">projectType</span>
-                <span class="method-start">24238 ms</span>
+                <span class="method-start">29921 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">industryType</span>
-                <span class="method-start">25466 ms</span>
+                <span class="method-start">31204 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">targetLanguage</span>
-                <span class="method-start">26684 ms</span>
+                <span class="method-start">32461 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">doClickOnLetsStartButton</span>
-                <span class="method-start">27888 ms</span>
+                <span class="method-start">33726 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.testcase.FileUploadTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">clickOnAddNewFile</span>
-                <span class="method-start">33603 ms</span>
+                <span class="method-start">40594 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">enterFileLocation</span>
-                <span class="method-start">37897 ms</span>
+                <span class="method-start">44806 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectFileType</span>
-                <span class="method-start">43907 ms</span>
+                <span class="method-start">50296 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.testcase.MakeOrderTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">clickOnMakeOrder</span>
-                <span class="method-start">50971 ms</span>
+                <span class="method-start">57116 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">clickOnTagetLanguage</span>
-                <span class="method-start">55585 ms</span>
+                <span class="method-start">61572 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">clickOnSubmit</span>
-                <span class="method-start">59832 ms</span>
+                <span class="method-start">65855 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">clickOnPlaceOrderNow</span>
-                <span class="method-start">64964 ms</span>
+                <span class="method-start">91095 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

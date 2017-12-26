@@ -53,7 +53,7 @@ public class CreateProjectTest extends Base_Test {
 		createproject.selectIndustry();
 		
 	}
-	
+	 
 	@Test(priority=4)
 	public void targetLanguage()
 	{
@@ -69,9 +69,7 @@ public class CreateProjectTest extends Base_Test {
 		String text =createproject.validateCreateProject();
 		Assert.assertEquals(text,"Add New File");
 		Thread.sleep(1000);
-		System.out.println(text);
-		
-		
+		System.out.println(text);			
 	}
 
 }

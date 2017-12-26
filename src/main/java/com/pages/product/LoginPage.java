@@ -39,6 +39,7 @@ public class LoginPage extends Base_Test {
 		waitForPageLoaded();
 		
 	}
+	
     public String Validate()
     {
     	 waitForPageLoaded();

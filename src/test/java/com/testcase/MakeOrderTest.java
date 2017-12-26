@@ -2,9 +2,11 @@ package com.testcase;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.main.product.Base_Test;
 import com.pages.product.MakeOrder;
 
-public class MakeOrderTest {
+public class MakeOrderTest extends Base_Test {
 	public MakeOrder makeorder;
 	
 	@Test(priority=1)
@@ -33,6 +35,7 @@ public class MakeOrderTest {
     @Test(priority=4)
 	public void clickOnPlaceOrderNow()
 	{
+    	pageScrolldown();
     	makeorder.placeAnOrder();
     	
 	}
