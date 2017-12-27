@@ -1,6 +1,8 @@
 package com.testcase;
 
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.main.product.Base_Test;
@@ -18,7 +20,7 @@ public class LoginPageTest extends Base_Test{
 		loginpage = new LoginPage();
 		   
 	}
-	@Test(priority=2)
+	@Test(priority=2,enabled = false)
 	public void doLogin()
 	{
 		loginpage.HomePagelogin(prop.getProperty("username"),prop.getProperty("password"));
@@ -28,6 +30,18 @@ public class LoginPageTest extends Base_Test{
 		System.out.println(tittle);	
 	}
 	  
+	//throw new skipException("skipping test case as run mode is y")
+	@Test(groups="Negative")
+
+		public void login()
+		{
+		loginpage.HomePagelogin("yuidif@fourtek@com","secret");
+		waitForPageLoaded();
+		WebElement login_txt=driver.findElement(By.xpath("//form[@id='loginform']/div[1]/div[1]/span[1]/strong[1]"));
+		String txt =login_txt.getText();
+		Assert.assertEquals(txt,"These credentials do not match our records.");
+	}
+	
 	
 }
 

@@ -9,17 +9,20 @@ public class LoginPage extends Base_Test {
 	
 	//Page Factory model
 	
-	@FindBy(xpath=".//*[@id='email']")
+	@FindBy(xpath=".//*[@id='email']")    // Enter the email id
 	WebElement txtbn_username;
 	
-	@FindBy(xpath=".//*[@id='password']")
+	@FindBy(xpath=".//*[@id='password']") //Enter the email password
 	WebElement txtbn_password;
 	
-	@FindBy(xpath="//form[@id='loginform']/div[4]")
+	@FindBy(xpath="//form[@id='loginform']/div[4]") // To Select the login button
 	WebElement btn_login;
 	
 	@FindBy(xpath=".//*[@id='start-project-card']/div/div/a[1]")
 	WebElement valid;
+	
+	@FindBy(xpath="//form[@id='loginform']/div[1]/div[1]/span[1]/strong[1]")
+	WebElement credentialMatch_negative;
 		
 	public LoginPage()
 	{
@@ -43,6 +46,7 @@ public class LoginPage extends Base_Test {
     public String Validate()
     {
     	 waitForPageLoaded();
+    	
     	 return valid.getText();
     	
     }
