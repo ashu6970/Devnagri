@@ -57,7 +57,7 @@ public class FileUploadTest extends Base_Test {
 		fileload.fileSelectionPop();
 		Thread.sleep(2000);
 		fileload.process();
-		driver.navigate().refresh();
+		refresh();
 		}
 		catch(Exception e)
 		{

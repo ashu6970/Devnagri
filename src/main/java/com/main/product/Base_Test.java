@@ -101,7 +101,13 @@ public class Base_Test {
  		}
 
    }
- 
+   
+   public static void refresh()
+   {
+	   driver.navigate().refresh();
+   }
+   
+   
    }
     
     
