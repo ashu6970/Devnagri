@@ -20,7 +20,7 @@ public class LoginPageTest extends Base_Test{
 		loginpage = new LoginPage();
 		   
 	}
-	@Test(priority=4)
+	@Test(priority=5)
 	public void doLogin()
 	{
 		loginpage.HomePagelogin(prop.getProperty("username"),prop.getProperty("password"));
@@ -31,24 +31,41 @@ public class LoginPageTest extends Base_Test{
 	}
 	  
 	//throw new skipException("skipping test case as run mode is y")
-	@Test(priority=3,groups="Negative")
+	@Test(priority=2,groups="Negative")
          public void invalidEmail()
 		{
 		loginpage.HomePagelogin("yuidif@fourtek@com","secret");
+		loginpage.clearEditBox();
 		waitForPageLoaded();
 		WebElement login_txt=driver.findElement(By.xpath("//form[@id='loginform']/div[1]/div[1]/span[1]/strong[1]"));
 		String txt =login_txt.getText();
 		Assert.assertEquals(txt,"These credentials do not match our records.");
+		
 	    }
 	 
-	@Test(priority=2,groups="Negative")
+	@Test(priority=3,groups="Negative")
 	public void invalidPassword()
 	{
 	loginpage.HomePagelogin("client@fourtek@com","12233");
+	loginpage.clearEditBox();
 	waitForPageLoaded();
 	WebElement login_txt=driver.findElement(By.xpath("//form[@id='loginform']/div[1]/div[1]/span[1]/strong[1]"));
 	String txt =login_txt.getText();
 	Assert.assertEquals(txt,"These credentials do not match our records.");
+	System.out.println(txt);
+	
+    }
+	
+	@Test(priority=4,groups="Negative")
+	public void invalidPwdEmail()
+	{
+	loginpage.HomePagelogin("cssddddt@fourtek@com","12233");
+	loginpage.clearEditBox();
+	waitForPageLoaded();
+	WebElement login_txt=driver.findElement(By.xpath("//form[@id='loginform']/div[1]/div[1]/span[1]/strong[1]"));
+	String txt =login_txt.getText();
+	Assert.assertEquals(txt,"These credentials do not match our records.");
+	
     }
 	
 	

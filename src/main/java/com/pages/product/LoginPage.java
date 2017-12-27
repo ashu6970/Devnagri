@@ -9,10 +9,10 @@ public class LoginPage extends Base_Test {
 	
 	//Page Factory model
 	
-	@FindBy(xpath=".//*[@id='email']")    // Enter the email id
+	@FindBy(xpath="//form[@id='loginform']/div[1]/div[1]/input[1]")    // Enter the email id
 	WebElement txtbn_username;
 	
-	@FindBy(xpath=".//*[@id='password']") //Enter the email password
+	@FindBy(xpath="//form[@id='loginform']/div[2]/div[1]/input[1]") //Enter the email password
 	WebElement txtbn_password;
 	
 	@FindBy(xpath="//form[@id='loginform']/div[4]") // To Select the login button
@@ -49,6 +49,12 @@ public class LoginPage extends Base_Test {
     	
     	 return valid.getText();
     	
+    }
+    public void clearEditBox()
+    {
+    	txtbn_username.clear();
+    	txtbn_password.clear();
+    	 	
     }
 
 }
