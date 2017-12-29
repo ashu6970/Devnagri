@@ -71,7 +71,6 @@ public class Base_Test {
 	public static void javaScriptClick(WebElement element) throws Exception {
 		try {
 			if (element.isEnabled() && element.isDisplayed()) {
-				System.out.println("Clicking on element with using java script click");
 
 				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 			} else {

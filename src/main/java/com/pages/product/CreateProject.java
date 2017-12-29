@@ -1,7 +1,5 @@
 package com.pages.product;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -61,8 +59,7 @@ public class CreateProject extends Base_Test{
 	 {
 		 Thread.sleep(1000);
 	  WebElement element = driver.findElement(By.xpath("//div[contains(@class,'row p-t-20')]/child::div[1]/div[1]/div/button")); 
-	  JavascriptExecutor executor = (JavascriptExecutor)driver; 
-	  executor.executeScript("arguments[0].click()", element);
+	  javaScriptClick(element);
 	  btn_website.click();
 	  }
 	 catch(Exception e)
@@ -77,8 +74,7 @@ public class CreateProject extends Base_Test{
 	  {
 		  Thread.sleep(1000);  
 	  WebElement element = driver.findElement(By.xpath("//div[contains(@class,'row p-t-20')]/child::div[2]/div/div/button[1]")); 
-	  JavascriptExecutor executor = (JavascriptExecutor)driver; 
-	  executor.executeScript("arguments[0].click()", element);
+	  javaScriptClick(element);
 	  btn_agriculture.click();
 	  }
 	  catch(Exception e)
@@ -94,13 +90,11 @@ public class CreateProject extends Base_Test{
 	  {
 		Thread.sleep(1000);
 	  WebElement element = driver.findElement(By.xpath(".//*[@id='addProjectForm']/div/div[4]/div[2]/div/div/button")); 
-	  JavascriptExecutor executor = (JavascriptExecutor)driver; 
-	  executor.executeScript("arguments[0].click()", element);
+	  javaScriptClick(element);
 	  btn_english.click();
 	  
 	  WebElement element1= driver.findElement(By.xpath(".//*[@id='addProjectForm']/div/div[4]/div[2]/div/div/button")); 
-	  JavascriptExecutor executor1 = (JavascriptExecutor)driver; 
-	  executor1.executeScript("arguments[0].click()", element1);
+	  javaScriptClick(element1);
 	  }
 	  catch(Exception e)
 	  {
@@ -111,9 +105,15 @@ public class CreateProject extends Base_Test{
   
   public void clickOnLetsStartbutton()
   {
+	  try
+	  {
 	  WebElement element1= driver.findElement(By.xpath("//div[@class='col-md-6 col-md-offset-3']/button[1]")); 
-	  JavascriptExecutor executor1 = (JavascriptExecutor)driver; 
-	  executor1.executeScript("arguments[0].click()", element1);
+	  javaScriptClick(element1);
+	  }
+	  catch(Exception e)
+	  {
+		  e.printStackTrace();
+	  }
   }
   
  public String validateCreateProject()
