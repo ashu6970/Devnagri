@@ -70,5 +70,16 @@ public class CreateProjectTest extends Base_Test {
 		System.out.println(txt);
 
 	}
+	
+	@Test(priority = 2, groups = "Negative")
+	public void onlyTypeProjectName() throws InterruptedException
+	{
+		createproject.enterProjectName("Negative Test");
+		Thread.sleep(2000);
+		createproject.clickOnLetsStartbutton();
+		WebElement login_txt = driver.findElement(By.xpath("//div[@class='alert alert-danger']/ul/li"));
+		String txt = login_txt.getText();
+		Assert.assertEquals(txt, "The languages field is required.");
+	}
 
 }
