@@ -66,7 +66,7 @@ public class CreateProjectTest extends Base_Test {
 		createproject.clickOnLetsStartbutton();
 		WebElement login_txt = driver.findElement(By.xpath("//div[@class='alert alert-danger']/ul/li"));
 		String txt = login_txt.getText();
-		// Assert.assertEquals(txt, arg1);
+		Assert.assertEquals(txt, "The name field is required.");
 		System.out.println(txt);
 
 	}
