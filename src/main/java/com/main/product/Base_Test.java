@@ -14,103 +14,77 @@ import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Base_Test {
-	
+
 	public static WebDriver driver;
-    public static Properties prop;
-    public static File file;
-    
-    //Read the property file
-    public static void readPropertyFile()
-    {
-    
-    try {
-        file = new File(System.getProperty("user.dir") + "/src/resource/java/config.prop");
-        FileInputStream file_read = new FileInputStream(file); 
-        prop = new Properties();
-        prop.load(file_read);
-    
-    } catch (FileNotFoundException e) {
-        e.printStackTrace();
-    } 
-    catch (IOException e) {
-        e.printStackTrace();
-    }
-}
-   public static void initializeBrowser()
-   {
-	  // String browserName = prop.getProperty("browser");
-		
-	   if (driver == null)
-	   {
-		   driver = new ChromeDriver(); 
-		  
-	  // if(browserName.equals("chrome")){
-		//	driver = new ChromeDriver(); 
+	public static Properties prop;
+	public static File file;
+
+	// Read the property file
+	public static void readPropertyFile() {
+
+		try {
+			file = new File(System.getProperty("user.dir") + "/src/resource/java/config.prop");
+			FileInputStream file_read = new FileInputStream(file);
+			prop = new Properties();
+			prop.load(file_read);
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		/*else if(browserName.equals("FF")){
-			driver = new FirefoxDriver(); 
+	}
+
+	public static void initializeBrowser() {
+		// String browserName = prop.getProperty("browser");
+
+		if (driver == null) {
+			driver = new ChromeDriver();
+
+			// if(browserName.equals("chrome")){
+			// driver = new ChromeDriver();
 		}
-		else
-		{
-			System.out.println("Browser is not open");
+		/*
+		 * else if(browserName.equals("FF")){ driver = new FirefoxDriver(); }
+		 * else { System.out.println("Browser is not open"); }
+		 */
+		driver.get(prop.getProperty("url"));
+		driver.manage().window().maximize();
+
+	}
+
+	public void waitForPageLoaded() {
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	}
+
+	public static void pageScrolldown() {
+		JavascriptExecutor down = (JavascriptExecutor) driver;
+		down.executeScript("window.scrollBy(0,500)", "");
+
+	}
+
+	public static void pageScrollUp() {
+		JavascriptExecutor up = (JavascriptExecutor) driver;
+		up.executeScript("scroll(0, -500);");
+	}
+
+	public static void javaScriptClick(WebElement element) throws Exception {
+		try {
+			if (element.isEnabled() && element.isDisplayed()) {
+				System.out.println("Clicking on element with using java script click");
+
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+			} else {
+				System.out.println("Unable to click on element");
 			}
-			*/
-	   driver.get(prop.getProperty("url"));
-	   driver.manage().window().maximize();
+		} catch (Exception e) {
+			System.out.println("Unable to click on element " + e.getStackTrace());
+		}
 
-	   }
-   
-    public void waitForPageLoaded() 
-   {
-	   driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-   }
-   
+	}
 
-   public static void pageScrolldown()
-   {
-	   JavascriptExecutor down = (JavascriptExecutor)driver;
-	   down.executeScript("window.scrollBy(0,500)", "");
-	   
-   }
-   
-   public static void pageScrollUp()
-   {
-	   JavascriptExecutor up = (JavascriptExecutor)driver;
-	   up.executeScript("scroll(0, -500);");
-   }
-   
-   
-   public static void javaScriptClick(WebElement element) throws Exception 
-   {
- 		try 
- 		{
- 			if (element.isEnabled() && element.isDisplayed())
- 			{
- 				System.out.println("Clicking on element with using java script click");
+	public static void refresh() {
+		driver.navigate().refresh();
+	}
 
- 				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
- 			} 
- 			else 
- 			{
- 				System.out.println("Unable to click on element");
- 			}
- 		}  
- 		 catch (Exception e) 
- 		{
- 			System.out.println("Unable to click on element "+ e.getStackTrace());
- 		}
-
-   }
-   
-   public static void refresh()
-   {
-	   driver.navigate().refresh();
-   }
-   
-   
-   }
-    
-    
-
-
-
+}
