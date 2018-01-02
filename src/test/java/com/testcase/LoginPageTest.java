@@ -50,7 +50,7 @@ public class LoginPageTest extends Base_Test {
 
 	@Test(priority = 4, groups = "Negative")
 	public void invalidPwdEmail() {
-		loginpage.HomePagelogin("cssddddt@fourtek@com", "12233");
+		loginpage.HomePagelogin("cssddddt@fourtek.com", "12233");
 		loginpage.clearEditBox();
 		WebElement login_txt = driver.findElement(By.xpath("//form[@id='loginform']/div[1]/div[1]/span[1]/strong[1]"));
 		String txt = login_txt.getText();

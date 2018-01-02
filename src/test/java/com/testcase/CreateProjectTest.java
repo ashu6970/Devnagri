@@ -13,7 +13,7 @@ public class CreateProjectTest extends Base_Test {
 	public CreateProject createproject;
 
 	@Test(priority = 0)
-	public void startproject() {
+	public void startProject() {
 		try {
 			createproject = new CreateProject();
 			createproject.startNewProject();
@@ -25,7 +25,7 @@ public class CreateProjectTest extends Base_Test {
 		}
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 4)
 	public void typeProjectName() {
 		try {
 			createproject.enterProjectName("New Project created");
@@ -34,24 +34,24 @@ public class CreateProjectTest extends Base_Test {
 		}
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 5)
 	public void projectType() {
 		createproject.selectProjectType();
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 6)
 	public void industryType() {
 		createproject.selectIndustry();
 
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 7)
 	public void targetLanguage() {
 		createproject.selectTargetLanguage();
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 8)
 	public void doClickOnLetsStartButton() throws InterruptedException {
 		createproject.clickOnLetsStartbutton();
 		pageScrolldown();
@@ -60,8 +60,9 @@ public class CreateProjectTest extends Base_Test {
 		Thread.sleep(1000);
 		System.out.println(text);
 	}
-
-	@Test(priority = 1, groups = "Negative")
+	//Leave all the fields blank and submit Tap on the start button without select any option
+	
+		@Test(priority = 1, groups = "Negative")
 	public void withOutSelectAllOptions() {
 		createproject.clickOnLetsStartbutton();
 		WebElement login_txt = driver.findElement(By.xpath("//div[@class='alert alert-danger']/ul/li"));
@@ -70,16 +71,29 @@ public class CreateProjectTest extends Base_Test {
 		System.out.println(txt);
 
 	}
-	
+	// Leave language field blank & fill all other mandatory fields then submit
 	@Test(priority = 2, groups = "Negative")
-	public void onlyTypeProjectName() throws InterruptedException
+	public void onlyEnterProjectName() throws InterruptedException
 	{
 		createproject.enterProjectName("Negative Test");
 		Thread.sleep(2000);
 		createproject.clickOnLetsStartbutton();
-		WebElement login_txt = driver.findElement(By.xpath("//div[@class='alert alert-danger']/ul/li"));
-		String txt = login_txt.getText();
+		WebElement Element= driver.findElement(By.xpath("//div[@class='alert alert-danger']/ul/li"));
+		String txt = Element.getText();
 		Assert.assertEquals(txt, "The languages field is required.");
+	}
+	
+	// Leave project name blank and fill all other mandatory fields then submit 
+	@Test(priority = 3, groups = "Negative")
+	public void onlySelectTargetLanguage() throws InterruptedException
+	{
+		createproject.clearEditBox();
+		createproject.selectTargetLanguage();
+		createproject.clickOnLetsStartbutton();
+		WebElement Element = driver.findElement(By.xpath("//div[@class='alert alert-danger']/ul/li"));
+		String txt = Element.getText();
+		Assert.assertEquals(txt, "The name field is required.");
+		
 	}
 
 }
