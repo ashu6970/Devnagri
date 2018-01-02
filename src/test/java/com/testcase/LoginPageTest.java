@@ -18,16 +18,6 @@ public class LoginPageTest extends Base_Test {
 		loginpage = new LoginPage();
 
 	}
-
-	@Test(priority = 5)
-	public void doLogin() {
-		loginpage.HomePagelogin(prop.getProperty("username"), prop.getProperty("password"));
-		waitForPageLoaded();
-		String tittle = loginpage.Validate();
-		Assert.assertEquals(tittle, "Start New Project");
-		System.out.println(tittle);
-	}
-
 	// throw new skipException("skipping test case as run mode is y")
 	@Test(priority = 2, groups = "Negative")
 	public void invalidEmail() throws InterruptedException {
@@ -55,6 +45,15 @@ public class LoginPageTest extends Base_Test {
 		WebElement login_txt = driver.findElement(By.xpath("//form[@id='loginform']/div[1]/div[1]/span[1]/strong[1]"));
 		String txt = login_txt.getText();
 		Assert.assertEquals(txt, "These credentials do not match our records.");
+	}
+	
+	@Test(priority = 5)
+	public void doLogin() {
+		loginpage.HomePagelogin(prop.getProperty("username"), prop.getProperty("password"));
+		waitForPageLoaded();
+		String tittle = loginpage.Validate();
+		Assert.assertEquals(tittle, "Start New Project");
+		System.out.println(tittle);
 	}
 
 }

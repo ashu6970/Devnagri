@@ -5,19 +5,9 @@
     <classes>
       <class name="com.testcase.CreateProjectTest">
         <methods>
-          <include name="doClickOnLetsStartButton"/>
+          <include name="startProject"/>
         </methods>
       </class> <!-- com.testcase.CreateProjectTest -->
     </classes>
   </test> <!-- Create Project Testcase(failed) -->
-  <test name="Make An Order Testcase(failed)">
-    <classes>
-      <class name="com.testcase.MakeOrderTest">
-        <methods>
-          <include name="clickOnPlaceOrderNow"/>
-          <include name="clickOnSubmit"/>
-        </methods>
-      </class> <!-- com.testcase.MakeOrderTest -->
-    </classes>
-  </test> <!-- Make An Order Testcase(failed) -->
 </suite> <!-- Failed suite [Automation Test Suite] -->

@@ -18,48 +18,13 @@ public class CreateProjectTest extends Base_Test {
 			createproject = new CreateProject();
 			createproject.startNewProject();
 			String url = driver.getCurrentUrl();
-			Assert.assertEquals(url, "http://dev.devnagri.co.in/projects/start");
+			Assert.assertEquals(url, "http://staging.devnagri.com/projects/start");
 			System.out.println(url);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	@Test(priority = 4)
-	public void typeProjectName() {
-		try {
-			createproject.enterProjectName("New Project created");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	@Test(priority = 5)
-	public void projectType() {
-		createproject.selectProjectType();
-
-	}
-
-	@Test(priority = 6)
-	public void industryType() {
-		createproject.selectIndustry();
-
-	}
-
-	@Test(priority = 7)
-	public void targetLanguage() {
-		createproject.selectTargetLanguage();
-	}
-
-	@Test(priority = 8)
-	public void doClickOnLetsStartButton() throws InterruptedException {
-		createproject.clickOnLetsStartbutton();
-		pageScrolldown();
-		String text = createproject.validateCreateProject();
-		Assert.assertEquals(text, "Add New File");
-		Thread.sleep(1000);
-		System.out.println(text);
-	}
 	//Leave all the fields blank and submit Tap on the start button without select any option
 	
 		@Test(priority = 1, groups = "Negative")
@@ -94,6 +59,42 @@ public class CreateProjectTest extends Base_Test {
 		String txt = Element.getText();
 		Assert.assertEquals(txt, "The name field is required.");
 		
+	}
+	
+	@Test(priority = 4)
+	public void typeProjectName() {
+		try {
+			createproject.enterProjectName("New Project created");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Test(priority = 5)
+	public void projectType() {
+		createproject.selectProjectType();
+
+	}
+
+	@Test(priority = 6)
+	public void industryType() {
+		createproject.selectIndustry();
+
+	}
+
+	@Test(priority = 7)
+	public void targetLanguage() {
+		createproject.selectTargetLanguage();
+	}
+
+	@Test(priority = 8)
+	public void doClickOnLetsStartButton() throws InterruptedException {
+		createproject.clickOnLetsStartbutton();
+		pageScrolldown();
+		String text = createproject.validateCreateProject();
+		Assert.assertEquals(text, "Add New File");
+		Thread.sleep(1000);
+		System.out.println(text);
 	}
 
 }
