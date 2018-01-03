@@ -13,33 +13,26 @@ public class CreateProject extends Base_Test {
 
 	@FindBy(xpath = ".//*[@id='start-project-card']/div/div/a[1]") // To the new project
 	WebElement btn_startNewProject;															
-	
 
 	@FindBy(xpath = "//form[@id='addProjectForm']/div[1]/div[1]/div[1]/input[1]") // Enter the Project name
 	WebElement txtbn_projectName;																			 
 	
-
 	@FindBy(xpath = "//div[contains(@class,'row p-t-20')]/child::div[1]/div[1]/div/button") // To select the Project type
 	WebElement btn_projectType;
 
 	@FindBy(xpath = "//div[@class='dropdown-menu show']/ul/li[2]/a/span[1]") // To select the website
 	WebElement btn_website;																		 
-																				
-																				
+																																							
 	@FindBy(xpath = ".//*[@id='addProjectForm']/div/div[2]/div[2]/div/div/div/ul/li[2]/a/span[1]") // To select the Agriculture
 	WebElement btn_agriculture;																								// 
 																									
-	
-
 	@FindBy(xpath = ".//*[@id='addProjectForm']/div/div[4]/div[2]/div/div/div/ul/li[9]/a/span[1]") // To select the English
     WebElement btn_english;
 
 	@FindBy(xpath = "//div[@class='col-md-6 col-md-offset-3']/button[1]") // click on Let's  start 
 	WebElement btn_letsGetStart;																	
 	
-
-	@FindBy(xpath = "//a[contains(text(),'Add New File')]") // Validate Project is created
-															 
+	@FindBy(xpath = "//a[contains(text(),'Add New File')]") // Validate Project is created														 
 	WebElement valid_createProject;
 
 	public CreateProject() {

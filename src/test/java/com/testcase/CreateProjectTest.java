@@ -58,13 +58,12 @@ public class CreateProjectTest extends Base_Test {
 		WebElement Element = driver.findElement(By.xpath("//div[@class='alert alert-danger']/ul/li"));
 		String txt = Element.getText();
 		Assert.assertEquals(txt, "The name field is required.");
-		
 	}
 	
 	@Test(priority = 4)
 	public void typeProjectName() {
 		try {
-			createproject.enterProjectName("New Project created");
+			createproject.enterProjectName("বাংলা");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
