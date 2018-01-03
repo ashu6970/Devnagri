@@ -1,5 +1,6 @@
 package com.testcase;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -34,7 +35,8 @@ public class MakeOrderTest extends Base_Test {
     @Test(priority=4)
 	public void clickOnPlaceOrderNow()
 	{
-    	pageScrolldown();
+    	JavascriptExecutor down = (JavascriptExecutor) driver;
+		down.executeScript("window.scrollBy(0,250)", "");
     	makeorder.placeAnOrder();
     	
 	}
